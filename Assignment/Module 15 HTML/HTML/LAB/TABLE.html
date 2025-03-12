@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOES COLLECTION</title>
+</head>
+
+<body>
+    <!-- Task : Create a product catalog table that includes the following columns : 
+                1) Product Name
+                2) Product image (use placeholder image URLs)
+                3) Price
+                4) Description
+                5) Availability (in stock, out stock)
+                
+               Additional Requirements :
+               1) Use thead for the table header. 
+               2) Add a border and some basic styling using inline css.
+               3) Use colspan or rowspan to merge cells where applicable.-->
+
+    <table bgcolor="LavenderBlush" border="4" align="center">
+        <caption>
+            <h1>Shoes Catalogue &#128095</h1>
+        </caption>
+
+        <tr>
+            <th>Company Name</th>
+            <th>Shoes Image</th>
+            <th>Price INR</th>
+            <th>Description</th>
+            <th>Availability</th>
+        </tr>
+
+
+        <tr>
+            <th rowspan="3">NIKE</th>
+            <td><a href="https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg"><img
+                        src="https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg" alt=""
+                        width="200px"></a></td>
+            <td align="center">9,999 INR</td>
+            <td align="center"> Shoes Name= Jordern Air 4 <br>Shoes-Size = UK-6,7,8,9,10,11 <br> Color = Red & White,
+                Blue & White </td>
+            <td align="center">In stock</td>
+        </tr>
+        <tr>
+            <td><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZog-lBbAAgrjPBQbPRUTc4-vpJ-XKf4MTpQ&s"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZog-lBbAAgrjPBQbPRUTc4-vpJ-XKf4MTpQ&s"
+                        alt="" width="200px"></a></td>
+            <td align="center">11,250 INR</td>
+            <td align="center">Shoes Name = Jorden 1 Low <br> Shoes-Size = UK 5,6,7,8,9,10 <br> color = White & Aqua
+            </td>
+            <td align="center">Last 3 In Stock</td>
+        </tr>
+        <tr>
+            <td><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCaq8zgjwMvxc3n2AgZNb1xs0onK3cRSr9uw&s">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCaq8zgjwMvxc3n2AgZNb1xs0onK3cRSr9uw&s"
+                        alt="" width="200px"></a></td>
+            <td align="center">10,000 INR</td>
+            <td colspan="2" align="center"> Shoes Name = Air Jorden 1 Low <br>
+                <p style="color: red;"> Out Of Stock </p>
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="2">PUMA</th>
+            <td>
+                <a
+                    href="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRPHFKwrnT9WgGfzo9tiL0g7kuwF8ZL76dWZSQkPbj5jokfnOUNeQsks_QIHGVag4mD5pTpBG_xbOAeOBKQaFEqJT_gzgrAQ0DMyKBxGNQzwaiWAtlFcbzp6g">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRPHFKwrnT9WgGfzo9tiL0g7kuwF8ZL76dWZSQkPbj5jokfnOUNeQsks_QIHGVag4mD5pTpBG_xbOAeOBKQaFEqJT_gzgrAQ0DMyKBxGNQzwaiWAtlFcbzp6g"
+                        alt="" width="200px"></a>
+            </td>
+            <td>3,000 INR</td>
+            <td align="center">Shoes Name = Puma Caven 2.0 Unisex Sneakers <br> Shoes Size = UK 6,7,8,9,10 <br> color =
+                Blue
+                & White <br> Material = Rubber</td>
+            <td align="center"> In Stock</td>
+
+        </tr>
+        <tr>
+
+            <td>
+                <a
+                    href="https://assets.ajio.com/medias/sys_master/root/hc8/h83/14150479380510/-473Wx593H-460475833-black-MODEL.jpg">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/hc8/h83/14150479380510/-473Wx593H-460475833-black-MODEL.jpg"
+                        alt="" width="200"></a>
+            </td>
+            <td>8,000 INR</td>
+            <td align="center">Shoes Name = PUMA Ferrari Drift Cat 5 Ultra <br> Shoes Size = UK 6,7,8,9,10 <br> color =
+                Black & Red <br> Material = Synthatic </td>
+            <td align="center">Last 2 In Stock</td>
+
+        </tr>
+        <tr>
+            <th>ADDIDAS</th>
+            <td><a href="https://i.pinimg.com/736x/11/4c/d9/114cd9a8acf867d3597a47218b55f01e.jpg"><img
+                        src="https://i.pinimg.com/736x/11/4c/d9/114cd9a8acf867d3597a47218b55f01e.jpg" width="200px"
+                        alt=""></a></td>
+            <td>6,999 INR</td>
+            <td align="center" colspan="2">Shoes Name = Addidas Low Sneakers <br>
+                <p style="color: red;">Out Of Stock</p>
+            </td>
+        </tr>
+        <tr>
+            <th>ASICS</th>
+            <td><a href="https://i.pinimg.com/736x/2f/b3/84/2fb384f12f3e97b4783ac399720042e5.jpg"><img
+                        src="https://i.pinimg.com/736x/2f/b3/84/2fb384f12f3e97b4783ac399720042e5.jpg" width="200px"
+                        alt=""></a></td>
+            <td>16,000 INR</td>
+            <td align="center">Shoes Name = Asics Women running shoes <br> Shoe Size = UK 4,5,6,7,8 <br> Color =
+                Multi-color</td>
+            <td align="center">Last Few In Stock</td>
+        </tr>
+    </table>
+</body>
+
+</html>
