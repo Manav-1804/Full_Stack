@@ -52,7 +52,7 @@
 
 .list .navlist .navlink {
     text-decoration: none;
-    font-size: 21px;
+    font-size: clamp(14px, 3.4vw, 21px);
     letter-spacing: 0px;
     text-transform: uppercase;
     font-family: "Baloo Bhai";
@@ -64,21 +64,21 @@
     display: flex;
     padding: 120px 0;
     /* background-size: 50% 100%; */
-    border: 2px solid red;
+   
 }
 
 .col-1 {
-    /* padding: 110px 125px; */
+    
     /* background-size: 100% 100%; */
     width: 50%;
-    border: 2px solid blue;
+   
 
 }
 
 
 .col-2 {
     width: 50%;
-    border: 2px solid brown;
+   
     text-align: center;
 }
 
@@ -87,24 +87,24 @@
     font-size: clamp(20px, 6.7vw, 60px);
     color: #6c9894;
     font-family: "Baloo Bhai";
-    border: 2px solid;
+    
 }
 
 .col-2 .p-col {
     padding: 20px 120px;
-    font-size: 15px;
+    font-size: clamp(14px, 3.4vw, 15px);
     color: #6c9894;
     font-weight: 400;
     font-family: "Montserrat";
     text-align: center;
-    border: 2px solid;
+    
 }
 
 .col-2 .btn-col {
     padding: 10px 15px;
     border-radius: 4px;
     border: none;
-    font-size: 17px;
+    font-size: clamp(1px, 3.4vw, 17px);
     letter-spacing: 4px;
     text-transform: uppercase;
     color: #fefefc;
@@ -126,25 +126,27 @@
 
 .our-text .h2-text {
     padding: 50px 0;
-    font-size: 75px;
+    font-size: clamp(20px, 6.7vw, 75px);
     color: #f4f9f4;
     font-family: "Baloo Bhai";
     text-align: center;
 }
 
 .our-text .p-text {
-    padding: 0px 250px;
-    font-size: 30px;
+    /* padding: 0px 250px; */
+    width: 62%;
+    font-size:clamp(14px, 3.4vw, 30px);
     color: #f4f9f4;
     font-weight: 400;
     font-family: "Montserrat";
     text-align: center;
+    margin: 0 auto;
 }
 
 #classes .row-1 {
 
     display: flex;
-    border: 2px solid;
+   
 
 }
 
@@ -153,8 +155,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid;
-    padding: 10px 0;
+    
+    padding: 30px 0;
     width: 33.33%;
 }
 
@@ -165,16 +167,17 @@
 }
 
 .col .our-h4 {
-
-    font-size: 37px;
+    padding: 20px 0;
+    font-size:clamp(14px, 3.4vw, 37px);
     color: #f4f9f4;
     font-family: "Baloo Bhai";
     text-align: center
 }
 
 .col .our-p {
-    padding: 20px 50px;
-    font-size: 22px;
+   
+    width: 70%;
+    font-size: clamp(14px, 3.4vw, 22px);
     color: #f4f9f4;
     font-weight: 400;
     font-family: "Montserrat";
@@ -191,19 +194,22 @@
 /* .our-stats {} */
 
 .our-stats .h2-stats {
-    font-size: 75px;
+    padding: 50px 0;
+    font-size:clamp(20px, 6.7vw, 75px);
     color: #6c9894;
     font-family: "Baloo Bhai";
     text-align: center
 }
 
 .our-stats .p-stats {
-    padding: 30px 250px;
-    font-size: 30px;
+    /* padding: 30px 250px; */
+    width: 62%;
+    font-size: clamp(14px, 3.4vw, 30px);
     color: #6c9894;
     font-weight: 400;
     font-family: "Montserrat";
     text-align: center;
+    margin: 0 auto;
 }
 
 #stats .stats-row {
@@ -212,31 +218,27 @@
 }
 
 .stats-row .stats-col {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 200px 0;
     width: 33.33%;
 }
 
-
-.stats-col {
-
-    padding: 200px 0;
-
-
-}
-
-
-
 .stats-col .h3-stats {
 
-    font-size: 67px;
+    font-size: clamp(20px, 6.7vw, 67px);
     color: #6c9894;
     font-family: "Myriad Pro";
     text-align: center;
 }
 
 .stats-col .p-stat {
-    padding: 0 100px;
-    font-size: 27px;
+    /* padding: 0 100px; */
+    width: 70%;
+    font-size:clamp(14px, 3.4vw, 27px);
     color: #6c9894;
     font-family: "Myriad Pro";
     text-align: center;
@@ -244,9 +246,10 @@
 
 /* #card {} */
 
-.card-row {
+ #card .card-row {
 
     display: flex;
+
 }
 
 .card-row .card-col {
@@ -255,25 +258,31 @@
     background-color: #6c9894;
 }
 
+
+
 .card-col .h2-card {
-    padding-top: 300px;
+    /* padding-top: 200px; */
+    margin-top: 100px;
     margin-left: 50px;
-    font-size: 75px;
+    font-size: clamp(20px, 6.7vw, 75px);
     color: #f4f9f4;
     font-family: "Baloo Bhai";
 }
 
 .card-col .p-card {
     /* padding: 40px 0; */
+    margin-top: 30px;
     margin-left: 50px;
-    font-size: 30px;
+    width: 80%;
+    font-size:clamp(14px, 3.4vw, 30px);
     color: #f4f9f4;
     font-weight: 400;
     font-family: "Montserrat";
 }
 
 .card-col .btn-card {
-    /* padding-left: 50px; */
+    /* padding-bottom: 100px; */
+    margin-top: 30px;
     padding: 15px 10px;
     border-radius: 4px;
     border: none;
@@ -284,40 +293,46 @@
     text-align: center;
 }
 
+.img-card {
+    width: 100%;
+    margin: 0 auto;
+}
+
 /* #card-2 {} */
 
-.card2-row {
+#card-2 .card2-row {
 
     display: flex;
+    
 }
 
 
-.card2-row .card2-col {
-
+.card2-row .card2-col1 {
+   
     width: 50%;
-    /* background-color: #6c9894; */
+    
 }
 
-
-.card2-col1 {
-    background-image: url(/images/Design.png);
-    background-repeat: no-repeat;
-    background-position: 400px;
-
+.img-card1{
+    width: 70%;
+    margin: 40px auto;
 }
+
 
 .card2-col1 .h2-card2 {
-    padding-top: 300px;
+    /* padding-top: 300px; */
+    margin-top: 100px;
     margin-left: 50px;
-    font-size: 75px;
+    font-size: clamp(20px, 6.7vw, 75px);
     color: #6c9894;
     font-family: "Baloo Bhai";
 }
 
 .card2-col1 .p-card2 {
-    padding: 40px 0;
+    /* padding: 40px 0; */
+    width: 80%;
     margin-left: 50px;
-
+    margin-top: 30px;
     font-size: 30px;
     color: #6c9894;
     font-weight: 400;
@@ -326,6 +341,7 @@
 
 .card2-col1 .btn-card2 {
     /* padding-left: 50px; */
+    margin-top: 30px;
     padding: 15px 10px;
     border-radius: 4px;
     border: none;
@@ -425,84 +441,3 @@
     border-radius: 4px;
 
 }
-
-#name {
-    padding: 50px 0;
-    background-image: url(/images/background\ 1.png);
-}
-
-.trainer .img-trainer {
-    padding: 20px 350px;
-}
-
-.trainer .p-trainer {
-    padding: 10px 100px;
-    font-size: 58px;
-    color: #6c9894;
-    font-weight: 400;
-    font-family: "Montserrat";
-    text-align: center;
-}
-
-.trainer .h4-trainer {
-    padding: 20px 0;
-    font-size: 58px;
-    color: #6c9894;
-    font-family: "Baloo Bhai";
-    text-align: center;
-}
-
-#update-subscribe {
-    background-color: #6c9894;
-    padding: 100PX 0;
-}
-
-.content {}
-
-.update .h1-update {
-    font-size: 75px;
-    color: #f4f9f4;
-    font-family: "Baloo Bhai";
-    text-align: center;
-}
-
-.update .p-update {
-    padding: 40PX 190PX;
-    font-size: 30px;
-    color: #f4f9f4;
-    font-weight: 400;
-    font-family: "Montserrat";
-    text-align: center;
-}
-
-.subscribe {
-    position: relative;
-    margin: 0 340px
-}
-
-.subscribe .email {
-    background-color: #ffffff;
-    /* opacity: 0.502; */
-    font-size: 25px;
-    color: #6c9894;
-    font-weight: 400;
-    font-family: "Montserrat";
-    text-align: center;
-    border-radius: 30px;
-    border: none;
-    padding: 5px 10px;
-}
-
-.subscribe-btn {
-    position: absolute;
-    border: none;
-    margin-left: -2.6REM;
-    border-radius: 30px;
-    font-size: 25px;
-    color: #6c9894;
-    font-family: "Baloo Bhai";
-    text-align: center;
-    padding: 5px 10px;
-}
-
-/* SECTION END */

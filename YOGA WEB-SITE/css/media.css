@@ -14,9 +14,27 @@
     .list{
         display: none;
     }
-     #header .navbar{
+
+    #icon{
         display: block;
-     }
+    }
+
+    #header .row{
+        display: block;
+    }
+
+    #classes .row-1 {
+       flex-direction: column;
+    }
+    
+    #classes .row-1 .card-col {
+    
+        width: 100%;
+    }
+
+
+    
+     
 
 }
 @media only screen and (max-width:576px) {
