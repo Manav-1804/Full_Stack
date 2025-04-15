@@ -21,8 +21,27 @@
 
     #header .row{
         display: block;
+      
+    }
+    .row .col-1 {
+        width: 100%;
+        
+       
+    
+    }
+    .col-2{
+        width: 100%;
+        padding: 20px 0px;
+        
     }
 
+    .col-2 .p-col{
+        width: 100%;
+    }
+
+    .col .our-img{
+        width: 80%;
+    }
    #classes .our-text .p-text {
        width: 100%;
     }
@@ -99,6 +118,23 @@
         width: 100%;
         padding: 0px 0px;
     }
+
+    #footer .row-foot{
+        flex-direction: column;
+        text-align: center;
+    }
+    #footer .row-foot .col-4{
+        width: 100%;
+    }
+    #footer .row-foot .col-6{
+        width: 100%;
+    }    
+    .p-footer {
+        width: 100%;
+    }
+    #footer .row-foot .col-6 .col {
+        width: 100%;
+    }
 }
 @media only screen and (max-width:576px) {
     .header-content .btn-header {
@@ -106,9 +142,9 @@
     }
     .subscribe {
     
-        /* margin: 0 340px */
+      
         padding: 10px 0;
-        /* width: 35%; */
+        
     }
     .subscribe .email, .subscribe-btn{
         padding: 5px 5px;
