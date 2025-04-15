@@ -44,15 +44,17 @@
         width: 100%;
     }
 
-    #stats .stats-row {
-        flex-direction: column;
-    }
+  
 
     #card .card-row  {
 
         flex-direction: column;
     }
     
+    .card-col .h2-card {
+        margin-top: 20px;
+    }
+
     .card-row .card-col {
 
         width: 100%;
@@ -67,6 +69,10 @@
         flex-direction: column;
     }
 
+    .card2-col1 .h2-card2{
+        margin-top: 0px;
+    }
+
     .card2-row .card2-col1 {
         width: 100%;
     }
@@ -78,9 +84,33 @@
     .row-title .col-title{
         width: 100%;
     }
+
+    .title .p-title{
+        width: 100%;
+    }
+
+    
+
+    .trainer .img-trainer{
+        width: 50%;
+    }
+
+    .p-update{
+        width: 100%;
+        padding: 0px 0px;
+    }
 }
 @media only screen and (max-width:576px) {
     .header-content .btn-header {
         padding: 10px 30px;
+    }
+    .subscribe {
+    
+        /* margin: 0 340px */
+        padding: 10px 0;
+        /* width: 35%; */
+    }
+    .subscribe .email, .subscribe-btn{
+        padding: 5px 5px;
     }
 }

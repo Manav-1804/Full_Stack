@@ -258,7 +258,9 @@
     background-color: #6c9894;
 }
 
-
+.card-col1{
+    padding: 10px 0;
+}
 
 .card-col .h2-card {
     /* padding-top: 200px; */
@@ -286,7 +288,7 @@
     padding: 15px 10px;
     border-radius: 4px;
     border: none;
-    font-size: 25px;
+    font-size: clamp(14px, 3.4vw, 25px);
     margin-left: 50px;
     color: #6c9894;
     font-family: "Baloo Bhai";
@@ -318,6 +320,9 @@
     margin: 40px auto;
 }
 
+.card2-text{
+    padding: 10px 0;
+}
 
 .card2-col1 .h2-card2 {
     /* padding-top: 300px; */
@@ -333,7 +338,7 @@
     width: 80%;
     margin-left: 50px;
     margin-top: 30px;
-    font-size: 30px;
+    font-size: clamp(16px, 3.4vw, 30px);
     color: #6c9894;
     font-weight: 400;
     font-family: "Montserrat";
@@ -345,7 +350,7 @@
     padding: 15px 10px;
     border-radius: 4px;
     border: none;
-    font-size: 25px;
+    font-size: clamp(16px, 3.4vw, 25px);
     margin-left: 50px;
     color: #f4f9f4;
     font-family: "Baloo Bhai";
@@ -365,15 +370,17 @@
 
 .title .h3-title {
     /* padding: 50px 0; */
-    font-size: 75px;
+    font-size: clamp(20px, 6.7vw, 75px);
     color: #f4f9f4;
     font-family: "Baloo Bhai";
     text-align: center;
 }
 
 .title .p-title {
-    padding: 20px 250px;
-    font-size: 30px;
+    padding: 20px 0px;
+    width: 60%;
+    margin: 20px auto;
+    font-size: clamp(16px, 3.4vw, 30px);
     color: #f4f9f4;
     font-weight: 400;
     font-family: "Montserrat";
@@ -391,7 +398,9 @@
     border: 2px solid;
     width: 33.33%;
     border-color: #f4f9f4;
-    ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px 0;
 
     border-radius: 8px;
@@ -399,30 +408,31 @@
 }
 
 .col-title .h4-title {
-    padding-top: 30px;
-    font-size: 37px;
+    /* padding-top: 30px; */
+    font-size: clamp(16px, 3.4vw, 37px);
     color: #6c9894;
     font-family: "Baloo Bhai";
     text-align: center;
 }
 
 .col-title .p1-title {
-    padding-top: 20px;
-    font-size: 37px;
+    /* padding-top: 20px; */
+    font-size: clamp(14px, 3.4vw, 37px);
     color: #6c9894;
     font-family: "Baloo Bhai";
     text-align: center;
 }
 
 .col-title .img-title {
-    /* padding: 0 140px; */
-    margin: 20px 130px;
+    padding: 20px 0px;
+    /* margin: 20px 130px; */
 
 }
 
 .col-title .p2-title {
-    padding: 10px 50px;
-    font-size: 22px;
+    padding-bottom: 20px;
+    width: 90%;
+    font-size: clamp(14px, 3.4vw, 22px);
     color: #6c9894;
     font-weight: 400;
     font-family: "Montserrat";
@@ -431,13 +441,179 @@
 
 .col-title .btn-title {
     padding: 10px 10px;
-    margin: 5px 100px;
+    /* margin: 5px 100px; */
     background-color: #6c9894;
-    font-size: 20px;
+    font-size: clamp(14px, 3.4vw, 20px);
     color: #ffffff;
     font-family: "Baloo Bhai";
     text-align: center;
     border: none;
+    width: 90%;
     border-radius: 4px;
 
+}
+
+#name {
+    padding: 50px 0;
+    background-image: url(/images/background\ 1.png);
+}
+
+.trainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.trainer .p-trainer {
+    /* padding: 10px 0px; */
+    width: 90%;
+    font-size: clamp(20px, 6.7vw, 58px);
+    color: #6c9894;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.trainer .h4-trainer {
+    padding: 40px 0;
+    font-size: clamp(20px, 6.7vw, 58px);
+    color: #6c9894;
+    font-family: "Baloo Bhai";
+    text-align: center;
+}
+
+#update-subscribe {
+    background-color: #6c9894;
+    padding: 100PX 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1-update {
+    padding: 30px 0px;
+    font-size: clamp(20px, 6.7vw, 75px);
+    color: #f4f9f4;
+    font-family: "Baloo Bhai";
+    text-align: center;
+}
+
+.p-update {
+    /* padding: 0PX 190PX; */
+    
+    width: 80%;
+    font-size: clamp(16px, 6.7vw, 30px);
+    color: #f4f9f4;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.subscribe {
+    
+    /* margin: 0 340px */
+    padding: 30px 0;
+    /* width: 35%; */
+}
+
+.subscribe .email {
+    background-color: #ffffff;
+    /* opacity: 0.502; */
+    font-size: clamp(16px, 1.7vw, 25px);
+    color: #6c9894;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+}
+
+.subscribe-btn {
+    
+    border: none;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    font-size:  clamp(16px, 1.7vw, 25px);
+    color: #6c9894;
+    font-family: "Baloo Bhai";
+    text-align: center;
+    padding: 5px 10px;
+}
+
+/* Footer starts */
+#footer {
+    background-color:white;
+    color:#6c9894;
+    padding: 50px 0;
+}
+
+.h4-footer {
+    font-size: clamp(16px, 3.5vw, 33px);
+    color:#6c9894;
+    font-weight: 400;
+    font-family:  "Baloo Bhai" ;
+}
+
+#footer .row-footer {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+#footer .row-footer .col-4 {
+    width: 40%;
+
+}
+
+#footer .row-footer .col-6 {
+    width: 60%;
+    /* display: flex; */
+    /* flex-direction: row; */
+}
+
+#footer .row-footer .col-6 .col-foot {
+    width: 33.33%;
+}
+
+.h2-footer {
+    font-size: clamp(18px, 3.5vw, 29px);
+    color:#6c9894;
+    font-weight: 400;
+    font-family: "Baloo Bhai";
+}
+
+.p-footer {
+    width: 80%;
+    margin: 20px 0;
+    font-size: clamp(16px, 3vw, 25px);
+    color:#6c9894;
+    font-family: "Baloo Bhai";
+    font-weight: 400;
+}
+
+.ul-footer {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.ul-footer .li-footer {
+    margin: 10px 0;
+}
+
+.ul-footer .li-footer .a-footer {
+    font-size: clamp(16px, 3vw, 25px);
+    color:#6c9894;
+    font-family:  "Baloo Bhai";
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footer-icon i {
+    font-size: clamp(16px, 3vw, 25px);
+    margin-right: 10px;
 }
