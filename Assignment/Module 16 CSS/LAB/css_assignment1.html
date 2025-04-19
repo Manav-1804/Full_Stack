@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<!--  
+HTML part
+Task: Create a contact form with the following fields: 
+o Full name (text input) 
+o Email (email input) 
+o Phone number (tel input) 
+o Subject (dropdown menu) 
+o Message (textarea) 
+o Submit button 
+
+Additional Requirements: 
+o Use appropriate form validation using required, minlength, maxlength, and pattern. 
+o Link form labels with their corresponding inputs using the for attribute.
+ -->
+
+<body>
+  <form id="form1" action="">
+    <legend id="legend">Contact-Form</legend>
+    <table border="0">
+      <tr>
+        <td class="labels">
+          <label for="fullname">Full name: </label>
+        </td>
+        
+        <td>
+          <input required type="text" id="fullname" pattern="[A-Za-z.\s]{3,50}" placeholder="Enter your Full name" />
+        </td>
+      </tr>
+      <tr>
+        <td class="labels"><label for="email">Email: </label></td>
+        
+        <td>
+          <input type="email" id="email" required pattern="[a-z0-9._]+@[a-z]+.[a-z]{2,3}"
+            placeholder="Enter your email " />
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">
+          <label for="phonenumber">Phone number: </label>
+        </td>
+       
+        <td>
+          <input type="tel" id="phonenumber" maxlength="10" required pattern="[6789][0-9]{9,9}"
+            placeholder="Enter your Phone Number" />
+        </td>
+      </tr>
+      <tr>
+        <td class="labels"><label for="subject">Subject: </label></td>
+        <td>
+          <select id="subject">
+            
+            <option disabled>Select your subject:</option>
+            <option>FULL-STACK</option>
+            <option>FRONT-END</option>
+            <option>BACK-END</option>
+            <option>UI/UX</option>
+            <option>DATA SCIENCE</option>
+            <option>DATA ANALYST</option>
+            <option>CYBER SECURITY</option>
+            <option>MERN-STACK</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">
+          <label for="message">Message: </label>
+        </td>
+        <td>
+          <textarea id="message" rows="4" cols="29" minlength="2" required placeholder="Enter your query..."></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2"><input id="sub-btn" type="submit" value="Submit" /></th>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

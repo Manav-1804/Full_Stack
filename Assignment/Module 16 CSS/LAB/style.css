@@ -1,0 +1,70 @@
+
+#form1 {
+    width: fit-content;
+    background: linear-gradient(to right, #f29492, #114357);
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 10px auto;
+  }
+  
+  #legend {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 38px ;
+    padding: 10px 0px;
+    color: white;
+    letter-spacing: 3px;
+  
+  }
+  
+  .labels {
+    vertical-align: top;
+    font-size: 24px;
+    padding: 10px 0;
+    padding-right: 25px;
+    padding-left:25px;
+  }
+  
+  
+  input {
+  
+    width: 300px;
+    font-size: 18px;
+    padding: 5px 5px;
+    margin: 5px 10px;
+  }
+  
+  select {
+    font-size: 18px;
+    padding: 5px 5px;
+    margin: 5px 10px;
+  }
+  
+  textarea {
+    font-size: 18px;
+    padding: 5px 5px;
+    margin: 5px 10px;
+  }
+  
+  #sub-btn {
+    background-color: #114357;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin: 10px auto;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+  
+  #sub-btn:hover {
+    background: #f29492;
+  }
+  
+  #sub-btn:active {
+    color:  #114357;
+    background: white;
+  }
