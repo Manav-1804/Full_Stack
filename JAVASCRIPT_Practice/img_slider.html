@@ -16,31 +16,31 @@
 
 <body>
     <div class="main">
-        <img src="https://staticg.sportskeeda.com/editor/2023/03/b579f-16776871165574-1920.jpg?w=640" alt=""
-            height="100%" width="100%" class="img">
-        <img src="https://cdn.luxe.digital/media/20230927084701/best-jordans-of-all-time-ranking-list-luxe-digital-1200x600.jpg"
-            alt="" height="100%" width="100%" class="img">
-        <img src="https://golfweek.usatoday.com/gcdn/authoring/images/smg/2024/11/29/SGLF/76656961007-87-777873519.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp"
-            alt="" height="100%" width="100%" class="img">
-        <img src="https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2024/05/932/470/GettyImages-53033254.jpg?ve=1&tl=1"
-            alt="" height="100%" width="100%" class="img">
+        <img src="/image/Image1.avif" alt="" height="100%" width="100%" class="img">
+        <img src="/image/Image2.jpg" alt="" height="100%" width="100%" class="img">
+        <img src="/image/Image3.webp" alt="" height="100%" width="100%" class="img">
+        <img src="/image/Image4.webp" alt="" height="100%" width="100%" class="img">
 
     </div>
 
-    <button onclick="silder()">Next image</button>
+    <button onclick="next()">Next image</button>
+    
+    <button onclick="privous()">Privous image</button>
+    
+
 
 
     <script>
 
 
 
-        let img_tag = document.getElementsByClassName("img")
+        var img_tag = document.getElementsByClassName("img")
         console.log(img_tag)
 
 
-        let index = 0
+        var index = 0
 
-        function silder() {
+        function next() {
 
 
             for (let i = 0; i < img_tag.length; i++) {
@@ -57,10 +57,14 @@
             }
 
 
-            setTimeout(silder, 1000)
+            // setTimeout(silder, 1000)
         }
 
-        silder()
+        next()
+
+
+        
+
     </script>
 </body>
 
