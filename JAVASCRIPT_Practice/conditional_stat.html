@@ -1,0 +1,98 @@
+<!-- there are 5 type of statment
+    1) simple if
+    2) if else
+    3) multiple else if
+    4) nested if else
+    5) switch case
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //1. simple if => print only true condition
+        var num = 100
+
+        if(num == 100){
+            console.log("valid..!")
+        }
+
+        //2. if else => print true or false condition
+
+        var num = 100
+        if(num ==100){
+            console.log("valid..!")
+
+        }
+        else{
+            console.log("not valid..!")
+        }
+
+        // 3. multiple if else 
+
+        var num = 95
+        if(num == 100){
+            console.log("perfect...")
+        }
+        else if(num>=90){
+            console.log("grade a++")
+        }
+        else if(num>=80){
+            console.log("grade b")
+        }
+        else{
+            console.log("poor")
+        }
+
+        // 4. nested if else
+
+        var num = 25
+
+        if(num>=35 && num<=100){
+           if(num>=90){
+            console.log("perfect")
+           }
+           else if(num>=80){
+            console.log("good")
+           }
+           else{
+            console.log("best")
+           }
+           
+        }
+        else{
+            console.log("fail")
+        }
+
+        // 5. switch case
+
+        var light = "blue"
+
+        switch (light){
+            case "red":
+                console.log("stop..");
+                break;
+
+            case "green":
+            console.log("go..");
+            break;
+
+            case "yellow":
+            console.log("press your break..");
+            break;
+
+            default:
+                console.log("invalid light..")
+
+        }
+
+        
+    </script>
+</body>
+</html>

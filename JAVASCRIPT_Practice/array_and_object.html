@@ -1,0 +1,78 @@
+<!-- array is group of multiple data
+    > array index allways start with 0
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ARRAY :
+        //  array is group of multiple data
+        // > array index allways start with 0
+
+
+        var index = ["manav",1,2,3,4,"uttam","inayat"]
+        console.log(index)
+        console.log(index[5])
+
+        //1. simple for
+
+        for(var i=4 ; i<index.length;i++){
+            console.log(index[i])
+            document.write(i, "values =>" , index[i] , "<br>") 
+        }
+
+        //2. for of = values
+
+        for(var data of index){
+            console.log(data)
+            document.write(data,"<br>")
+        }
+
+        //3. for in = index and values
+        for(var data in index){
+            console.log(index[data])
+            document.write(data , "values =>" , index[data] , "<br>") 
+        }
+    </script>
+
+    <script>
+        //OBJECT :-
+        // COLLECTION OF MULTIPLE VALUES IN SINGLE VARIABLES {}
+        //KEYS AND VALUES        
+        
+        // SYNTEX :-
+        // VAR OBJECT NAME{
+        //  KEY : "VALUES"
+        // }
+
+        var shoes = {
+            name : "low dunks",
+            brand : "nike",
+            price : "5000 inr",    
+        }
+        console.log(shoes)
+        console.log(shoes.name)
+
+        // for of :-values print
+
+        // for(var data of shoes){
+        //     console.log(data)
+        //     document.write(data,"<br>")
+        // }
+
+        //for in :- values and data print
+        for(var data in shoes){
+            console.log(shoes[data])
+            document.writeln(data," =>  ",shoes[data],"<br>")
+        }
+
+    </script>
+</body>
+</html>

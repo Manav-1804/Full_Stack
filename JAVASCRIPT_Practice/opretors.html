@@ -1,0 +1,93 @@
+<!-- there are six types of operators
+    1) assignment
+    2) artihmatic 
+    3) logical
+    4) inc / dec
+    5) comparition
+    6) ternary
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. assignment operators
+
+        var manav = 10
+
+        // 2. arithmatic operators (+,-,*,/,%)
+
+        var x = 10 , y = 3
+        var sum = x + y;
+        document.write("sum =>",sum, "<br>") 
+        
+        var sub = x - y;
+        document.write("sub =>",sub, "<br>")
+        // console.log("sub =>", x - y)
+
+        var mul = x * y;
+        document.write("mul =>",mul, "<br>")
+
+        var div = x / y;
+        document.write("div =>",div, "<br>")
+
+        var mod = x % y;
+        document.write("mod =>",mod, "<br>")
+
+
+        // 3. comparison operators (< , > , <= , >= , == , === , !=)
+
+        var a = 30 , b = 20
+        console.log(a<b)
+        console.log(a>b)
+        console.log(a<=b)
+        console.log(a>=b)
+        console.log(a == b)
+        console.log(a === b)
+        console.log(a != b)
+
+         // 4. logical operators (&& , || , !)
+
+         var adult = 20
+         var teen = 15
+
+         console.log(adult > 20 && teen == 15)
+         // T T = true
+         // t f = f
+         // f t = f
+         // f f = f
+         console.log(adult > 20 || teen >20)
+        // T T = t
+         // t f = t
+         // f t = t
+         // f f = false
+
+         console.log( teen != 16)
+         
+        // 5. inc / dec (inc i++ , ++i, i--, --i)
+
+        var n = 15
+        n++;
+        n--;
+        // console.log(n++)
+        // console.log(n++)
+        // console.log(++n)
+        console.log(n--)
+        console.log(n--)
+        console.log(--n)
+        
+         // 6. ternery operators
+
+         let age = 18;
+
+        let message = (age > 18) ? "You can vote" : "You cannot vote";
+        console.log(message);  // "You can vote"
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 3 types of variables 
+ 1) var 
+ 2) let
+ 3) const  -->
+
+ <!-- 1) var -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        // 1. var = global 
+        var name="manav" // declaration allow
+        var name="manav" // re-declaration allow
+        name = "manav" // re-assignment allow
+
+        console.log("name =>",name)
+
+        // 2. let = local 
+        let name2="inayat" // declaration allow
+        let name1="inayat" // re-declaration not allow
+        name2 = "inayat" // re-assignment allow
+
+        console.log("name1 =>",name1)
+
+        // 3. const = unique
+        const number=20 // declaration allow
+        const number1=20 // re-declaration not allow
+        number3 = 20 // re-assignment not allow
+
+        console.log("number =>",number3)
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,65 @@
+<!-- there are 4 types of loops
+    1) simple for loop
+    2) while loop
+    3) do while loop
+    4) nested for loop
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    //1. simple for loop
+
+        for (var i = 1; i <= 5; i++) {
+
+            console.log(i);
+        }
+
+        for (var i = 5; i >= 1; i--) {
+            console.log(i)
+        }
+
+        // 2. while loop
+
+        var i = 6;
+        while (i <= 5) {
+            console.log("loops count =>" + i);
+            i++;
+        }
+
+
+
+        // 3. do while loop
+
+        var i = 1;
+
+        do {
+            console.log("Count is: " + i);
+            i++;
+        } while (i <= 10);
+
+
+        //4. nested for loop
+
+        for (var i = 1; i <= 5; i++) {
+            for( var c=1;c<=i;c++){
+                console.log("*")
+                document.writeln("*")
+            }
+            document.writeln("<br>")
+
+        }
+
+
+    </script>
+</body>
+
+</html>
