@@ -1,0 +1,180 @@
+<!-- 
+ Create a 3x3 grid of product cards using CSS Grid. Each card should contain: 
+1) A product image. 
+2) A product title. 
+3) A price. 
+ 
+Additional Requirements: 
+1) Use grid-template-columns to create the grid layout.  
+2) Use grid-gap to add spacing between the grid items. 
+3) Apply hover effects to each card for better interactivity.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #1A1D23;
+        }
+        .container{
+            margin: 70px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 5px;
+            width: 100%;
+        }
+        .card {
+            width: 350px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #2E4053;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.4s, background-color 0.4s;
+            text-align: center;
+            padding: 15px 0px;
+        }
+        .img {
+            width: 100%;
+            border-radius: 8px;
+            height: 70%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            width: fit-content;
+        }
+        .card h3 {
+            color: #FFD700;
+            margin: 10px 0;
+            font-size: clamp(10px, 2.5vw, 22px);
+        }
+
+        .card p {
+            color: #F5F5DC;
+            font-size: clamp(7px, 2.5vw, 18px);
+            font-weight: bold;
+        }
+
+        /* css for hover effect */
+        .card:hover {
+            transform: scale(1.3);
+            background-color: #4A6785;
+        }
+        .card:hover p{
+            color: lightcoral;
+        }
+
+        /* Responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg">
+            </div>
+            <div class="text">
+                <h3>Jordern Air 4<h3>
+                <p>Price:9,999 INR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZog-lBbAAgrjPBQbPRUTc4-vpJ-XKf4MTpQ&s">
+            </div>
+            <div class="text">
+                <h3>Jorden 1 Low<h3>
+                <p>Price:11,250 INR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCaq8zgjwMvxc3n2AgZNb1xs0onK3cRSr9uw&s">
+            </div>
+            <div class="text">
+                <h3>Air Jorden 1 Low<h3>
+                <p>Price:10,000 INR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://img01.ztat.net/article/spp-media-p1/f3ab7e59de2940fbbfa55399e6a7970f/a3e83a7dc5e54b0c9aee5eecfd940e82.jpg">
+            </div>
+            <div class="text">
+                <h3>Puma Caven 2.0<h3>
+                <p>Price:3,000 INR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://assets.ajio.com/medias/sys_master/root/hc8/h83/14150479380510/-473Wx593H-460475833-black-MODEL.jpg">
+            </div>
+            <div class="text">
+                <h3>PUMA Ferrari Drift Cat 5 Ultra<h3>
+                <p>Price:8,000 INR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://i.pinimg.com/736x/11/4c/d9/114cd9a8acf867d3597a47218b55f01e.jpg">
+            </div>
+            <div class="text">
+                <h3>Addidas Low Sneakers<h3>
+                <p>Price:6,999 INR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://i.pinimg.com/736x/2f/b3/84/2fb384f12f3e97b4783ac399720042e5.jpg">
+            </div>
+            <div class="text">
+                <h3>Asics Women running shoes<h3>
+                <p>Price:16,000 INR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://bugattishoes.in/cdn/shop/files/318-AGY02-1000-7000.jpg">
+            </div>
+            <div class="text">
+                <h3>Bugatti Green Premium Leather Derby Shoes<h3>
+                <p>Price:13,900 INR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="https://img.thesitebase.net/10444/10444323/products/ver_1/1725941872704.jpg">
+            </div>
+            <div class="text">
+                <h3>Retro British Bullock Oxford Shoes<h3>
+                <p>Price:25,375 INR</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

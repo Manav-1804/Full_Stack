@@ -1,0 +1,102 @@
+<!-- Lab Assignment - 1 :
+Create a profile card layout using the box model. The profile card shouldinclude:
+
+    o A profile picture
+    o The user’s name and bio
+    o A button to "Follow" the user.
+
+Additional Requirements:
+1. Add padding and borders to the elements.
+2. Ensure the layout is clean and centered on the page using CSS margins.
+3. Use the box-sizing property to demonstrate both content-box and border-box
+on different elements.
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("https://img.freepik.com/free-photo/empty-soccer-stadium-with-dreamy-fantasy-view-sky_23-2151563094.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .container {
+            height: 460px;
+            width: 280px;
+            box-shadow: 0 0 20px 10px rgb(163, 34, 189);
+            margin: 5% auto;
+            background-color: #660033;
+            border: 5px solid black;
+            box-sizing: content-box;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10%;
+            transition: .7s;
+        }
+        .container:hover{
+            transform: scale(1.2);
+        }
+        .image {
+            height: 280px;
+            width: 280px;
+            box-sizing: content-box;
+            transition: .4s;
+        }
+        .image:hover{
+            border-radius: 0%;
+            scale: 1.2;
+        }
+
+        .h2 {
+            font-size: 30px;
+            text-align: center;
+            color: #B1B1B1;
+        }
+        .h2:hover{
+            color: #F0E4CC;
+        }
+
+        .para {
+            text-align: center;
+            font-size: larger;
+            color: #E5E5EA;
+        }
+        .para:hover{
+            color: #F0E4CC;
+        }
+        .btn {
+            height: 30px;
+            width: 100px;
+            color: cornsilk;
+            margin: 5% auto;
+            background-color: blue;
+            position: absolute;
+            bottom: 5px;
+            left: 30%;
+        }
+        .btn:hover{
+            background-color: #B1B1B1;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://img.freepik.com/premium-photo/cricket-game-with-action-player-neon-light_1205263-113287.jpg" alt="" class="image">
+        <h2 class="h2">Andriano Marco</h2>
+        <p class="para"> Cricketor || Influencer</p>
+        <button class="btn">Follow</button>
+    </div>
+</body>
+
+</html>

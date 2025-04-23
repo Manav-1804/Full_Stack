@@ -1,0 +1,46 @@
+<!-- furnction  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1 id="h1">Hello my name is manav prajapati</h1>
+    <button onclick="change()">next NAME</button>
+    <button onclick="change1()">previous name</button>
+    <script>
+        // var a = 20 , b = 30
+        // without parameter
+
+        function sum(){
+            console.log(a + b)
+        }
+        // sum()
+
+        // with parameter
+
+        function sub(a,b){
+            console.log(a -b)
+        }
+        // sub(30,20)
+
+        var a =30 , b = 2
+        function mul(){
+            return  a+b
+        }
+        console.log(mul())
+    </script>
+    <script>
+        function change(){
+            document.getElementById("h1").innerHTML="Hello my name is inayat"
+            // document.getElementById("h1").innerHTML="Hello my name is manav"
+        }
+
+        function change1(){
+             document.getElementById("h1").innerHTML="Hello my name is manav"
+        }        
+    </script>
+ </body>
+ </html>

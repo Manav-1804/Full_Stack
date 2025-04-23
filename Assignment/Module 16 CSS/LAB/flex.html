@@ -1,0 +1,140 @@
+<!-- 
+ Create a simple webpage layout using Flexbox. The layout should include: 
+1. A header. 
+2. A sidebar on the left. 
+3. A main content area in the center. 
+4. A footer. 
+ 
+Additional Requirements: 
+1. Use Flexbox to position and align the elements. 
+2. Apply different justify-content and align-items properties to observe their effects. 
+3. Ensure the layout is responsive, adjusting for smaller screens. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Starting with main container */
+        #main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 20px;
+            font-size: clamp(10px, 3vw, 30px);
+            background-color: #8E7DBE;
+            text-align: center;
+            color: azure;
+        }
+
+        .container {
+            display: flex;
+            justify-items: center;
+        }
+
+        .side {
+            font-size: clamp(10px, 2.5vw, 20px);
+            padding: 5px;
+            width: 20%;
+            color: blue;
+            background-color: #F4F8D3;
+            text-align: center;
+        }
+
+        .section {
+            width: 100%;
+            padding: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 20px;
+            column-gap: 30px;
+            background-color: #E9DFC3;
+        }
+
+        .section div {
+            align-content: center;
+            text-align: center;
+            font-size: clamp(12px, 2.5vw, 25px);
+        }
+
+        
+        .box {
+            background-color: #AFDDFF;
+            width: 25%;
+            height: 350px;
+            border: 2px solid;
+        }
+
+
+        /* Footer */
+        .footer {
+            background-color: #8E7DBE;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 10px;
+        }
+
+        .p-footer {
+            font-size: clamp(16px, 3vw, 25px);
+        }
+
+        /* media */
+        @media only screen and (max-width: 925px) {
+            .box5 {
+                margin-left: 0;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .section div {
+                height: 200px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .section div {
+                height: 150px;
+                row-gap: 5px;
+                column-gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <header class="header">This is header of the site</header>
+        <div class="container">
+            <aside class="side">This is aside menu</aside>
+            <section class="section">
+                <div class="box">Card box - 1</div>
+                <div class="box">Card box - 2</div>
+                <div class="box">Card box - 3</div>
+                <div class="box">Card box - 4</div>
+                <div class="box">Card box - 5</div>
+                <div class="box">Card box - 6</div>
+                <div class="box">Card box - 7</div>
+                <div class="box">Card box - 8</div>
+                <div class="box">Card box - 9</div>
+            </section>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <p class="p-footer">&copy; All rights reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>
