@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Task 3: Write a do-while loop that continues to ask the user for input until they enter a number greater than 10. 
+        let number;
+
+        do {
+            number = parseFloat(prompt("Enter a number greater than 10:"));
+        } while (isNaN(number) || number <= 10);
+
+        console.log("You entered:", number);
+        document.write("You entered:", number);
+
+       
+    </script>
+</body>
+</html>
