@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        fetch("data1.json", {
+            method: "GET"
+        })
+             .then((data)=>{
+            return data.json();
+        })
+            .then((data) => {
+                console.log(data);
+
+                [...data.user, ...data.admin, ...data.product].forEach((data1) => {
+                    if ('course' in data1) {
+                        document.write(`<h2>id : ${data1.id} Name : ${data1.name} Course: ${data1.course}</h2>`);
+                    } else if ('email' in data1) {
+                        document.write(`<h2>id : ${data1.id} Name : ${data1.name} Email: ${data1.email}</h2>`);
+                    } else if ('productname' in data1 && 'price' in data1) {
+                        document.write(`<h2>id : ${data1.id} Name : ${data1.name} Productname : ${data1.productname} Price: ${data1.price}</h2>`);
+                    }
+                });
+            });
+    </script>
+
+</body>
+
+</html>

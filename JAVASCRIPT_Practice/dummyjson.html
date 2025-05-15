@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="3">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Body</th>
+                <th>Post Id</th>
+                <th>Likes</th>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        fetch("https://dummyjson.com/comments", {
+            method: "GET"
+        })
+            .then((res) => {
+                return res.json();
+            })
+
+            .then((data) => {
+                let userdata = data.comments.map((user, index) => {
+                    console.log(user)
+                    return (
+                        `
+                            <tr>
+
+                                <td>${user.id}</td>
+                                <td>${user.body}</td>
+                                <td>${user.postId}</td>
+                                <td>${user.likes}</td>
+                                <td>${user.user.id}</td>
+                                <td>${user.user.username}</td>
+                                <td>${user.user.fullName}</td>
+                            </tr>
+
+
+                        `
+                    )
+                })
+                document.querySelector("tbody").innerHTML = userdata.join("")
+            })
+    </script>
+</body>
+
+</html>
