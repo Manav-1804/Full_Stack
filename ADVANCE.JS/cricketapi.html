@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .card {
+            background: linear-gradient(135deg, #00feba, #5b548a);
+            color: #fff;
+        }
+        
+        .card .name {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .card .team {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f0e68c;
+        }
+        
+        .card .role {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffd280;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <button class="btn btn-success">Search</button>
+                    </div>
+                    <div class="text-center mb-4">
+                        <h2 class="name"></h2>
+                        <h4 class="team"></h4>
+                        <h3 class="role"></h3>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-4">
+                            <h4 class="test"></h4>
+                            <p class="test-matches"></p>
+                            <p class="test-runs"></p>
+                            <p class="test-wickets"></p>
+                            <p class="test-highestRuns"></p>
+                            <p class="test-century"></p>
+                            <p class="test-halfCentury"></p>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <h4 class="odi"></h4>
+                            <p class="odi-matches"></p>
+                            <p class="odi-runs"></p>
+                            <p class="odi-wickets"></p>
+                            <p class="odi-highestRuns"></p>
+                            <p class="odi-century"></p>
+                            <p class="odi-halfCentury"></p>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <h4 class="t20i"></h4>
+                            <p class="t20i-matches"></p>
+                            <p class="t20i-runs"></p>
+                            <p class="t20i-wickets"></p>
+                            <p class="t20i-highestRuns"></p>
+                            <p class="t20i-century"></p>
+                            <p class="t20i-halfCentury"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let searchinp = document.querySelector(".input-group input");
+        let serchbtn = document.querySelector(".input-group button");
+        let apiid = "https://682c2285d29df7a95be5a01e.mockapi.io/users?name=";
+
+         async function cricket(player) {
+            const res = await fetch(apiid + player)
+            const data = await res.json()
+            // console.log(data)
+
+            for (let info of data){
+                // console.log(info.name)
+                document.querySelector(".name").innerHTML=info.name;
+                document.querySelector(".team").innerHTML=info.teamName;
+                document.querySelector(".role").innerHTML=info.role;
+                document.querySelector(".test").innerHTML= "Test";
+                document.querySelector(".odi").innerHTML= "Odi";
+                document.querySelector(".t20i").innerHTML= "t20i";
+                document.querySelector(".test-matches").innerHTML=`Matches :${info.test.matches}`;
+                document.querySelector(".odi-matches").innerHTML=`Matches :${info.odi.matches}`;
+                document.querySelector(".t20i-matches").innerHTML=`Matches :${info.test.matches}`;
+                document.querySelector(".test-runs").innerHTML=`Runs :${info.test.runs}`;
+                document.querySelector(".odi-runs").innerHTML=`Runs :${info.odi.runs}`;
+                document.querySelector(".t20i-runs").innerHTML=`Runs :${info.t20i.runs}`;
+                document.querySelector(".test-wickets").innerHTML=`Wickets :${info.test.wickets}`;
+                document.querySelector(".odi-wickets").innerHTML=`Wickets :${info.odi.wickets}`;
+                document.querySelector(".t20i-wickets").innerHTML=`Wickets :${info.t20i.wickets}`;
+                document.querySelector(".test-highestRuns").innerHTML=`Highest Runs :${info.test.highestRuns}`;
+                document.querySelector(".odi-highestRuns").innerHTML=`Highest Runs :${info.odi.highestRuns}`;
+                document.querySelector(".t20i-highestRuns").innerHTML=`Highest Runs :${info.t20i.highestRuns}`;
+                document.querySelector(".test-century").innerHTML=`Century :${info.test.century}`;
+                document.querySelector(".odi-century").innerHTML=`Century :${info.odi.century}`;
+                document.querySelector(".t20i-century").innerHTML=`Century :${info.t20i.century}`;
+                document.querySelector(".test-halfCentury").innerHTML=`Half Century :${info.test.halfCentury}`;
+                document.querySelector(".odi-halfCentury").innerHTML=`Half Century :${info.odi.halfCentury}`;
+                document.querySelector(".t20i-halfCentury").innerHTML=`Half Century :${info.t20i.halfCentury}`;
+                
+            }
+        
+
+        }
+          serchbtn.addEventListener("click",()=>{
+            cricket(searchinp.value)
+           
+        })
+        
+    </script>
+</body>
+</html>
