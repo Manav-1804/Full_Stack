@@ -18,19 +18,25 @@
     <script>
 
         // Task 1: Write a function greetUser that accepts a user’s name as a parameter and displays agreeting message (e.g., "Hello, John!").        
-
+        document.writeln("<h2> This is the greetUser Function...</h2>")
         function greetUser(name) {
             console.log(`Hello, ${name}!`);
+            document.writeln(`Hello, ${name}!<br>`);
+            document.write("<br>")
         }
 
         greetUser("John");
         greetUser("Manav");
         greetUser("Inayat");
+        
+
 
         // Task 2: Create a JavaScript function calculateSum that takes two numbers as parameters, adds them, and returns the result
 
         var result = calculateSum(10, 20);
-        console.log(result); // Output: 12
+        console.log(result); 
+        document.write("<h2> This is the calculatesum Function...</h2>")
+        document.writeln(`<br>${result}`)
 
         function calculateSum(a, b) {
             return a + b;
