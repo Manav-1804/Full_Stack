@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f2f5;
+    }
+
+    .container {
+      background: white;
+      padding: 20px 30px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .form-group i {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #555;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px 10px 10px 35px;
+      box-sizing: border-box;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .gender-options {
+      display: flex;
+      gap: 10px;
+    }
+
+    .gender-options label {
+    display: flex;
+      margin-right: 10px;
+    }
+
+    .checkbox{
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      padding-bottom: 15px;
+      
+    }
+
+    button {
+      padding: 10px;
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2><i class="fas fa-user-plus"></i> Registration Form</h2>
+    <form id="registrationForm" novalidate>
+      <div class="form-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="firstName" placeholder="First Name">
+      </div>
+
+      <div class="form-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="lastName" placeholder="Last Name">
+      </div>
+
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" placeholder="Email">
+      </div>
+
+      <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" placeholder="Password">
+      </div>
+
+      <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+      </div>
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="gender-options">
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Select Country:</label>
+        <select id="country">
+          <option value="">-- Select Country --</option>
+          <option value="India">INDIA</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="UK">RUSSIA</option>
+          <option value="UK">CANDA</option>
+          <option value="UK">SOUTH-AFRICA</option>
+          <option value="UK">DUBAI</option>
+          <option value="UK">AUSTRALIA</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <i class="fas fa-phone"></i>
+        <input type="text" id="mobile" placeholder="Mobile Number" maxlength="10">
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="agree">
+        <label for="agree">I agree to the Terms and Conditions</label>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+
+    function createErrorMessage(inputElement, message) {
+      const existingError = inputElement.parentNode.querySelector('.error');
+      if (existingError) existingError.remove();
+
+      const error = document.createElement('div');
+      error.className = 'error';
+      error.textContent = message;
+      inputElement.parentNode.appendChild(error);
+    }
+
+    function validateForm(event) {
+      event.preventDefault();
+
+      let isValid = true;
+
+   
+      document.querySelectorAll('.error').forEach(e => e.remove());
+
+      const fields = [
+        { id: 'firstName', label: 'First Name' },
+        { id: 'lastName', label: 'Last Name' },
+        { id: 'email', label: 'Email' },
+        { id: 'password', label: 'Password' },
+        { id: 'confirmPassword', label: 'Confirm Password' },
+        { id: 'mobile', label: 'Mobile Number' }
+      ];
+
+      fields.forEach(field => {
+        const input = document.getElementById(field.id);
+        if (input.value.trim() === '') {
+          createErrorMessage(input, `${field.label} is required.`);
+          isValid = false;
+        }
+      });
+
+      
+      const password = document.getElementById('password');
+      const confirmPassword = document.getElementById('confirmPassword');
+      if (password.value !== confirmPassword.value) {
+        createErrorMessage(confirmPassword, "Passwords do not match.");
+        isValid = false;
+      }
+
+    
+      const genderSelected = document.querySelector('input[name="gender"]:checked');
+      if (!genderSelected) {
+        const genderGroup = document.querySelector('.gender-options');
+        const error = document.createElement('div');
+        error.className = 'error';
+        error.textContent = 'Gender is required.';
+        genderGroup.parentNode.appendChild(error);
+        isValid = false;
+      }
+
+     
+      const country = document.getElementById('country');
+      if (country.value === '') {
+        createErrorMessage(country, "Country selection is required.");
+        isValid = false;
+      }
+
+     
+      const agree = document.getElementById('agree');
+      if (!agree.checked) {
+        const checkboxGroup = agree.parentNode;
+        const error = document.createElement('div');
+        error.className = 'error';
+        error.textContent = 'You must agree to the terms.';
+        checkboxGroup.appendChild(error);
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert('Form submitted successfully!');
+        form.reset();
+      }
+    }
+
+   
+    const mobileInput = document.getElementById('mobile');
+    mobileInput.addEventListener('keypress', function (e) {
+      const charCode = e.charCode || e.keyCode;
+      if (charCode < 48 || charCode > 57) {
+        e.preventDefault();
+      }
+    });
+
+    form.addEventListener('submit', validateForm);
+  </script>
+
+</body>
+</html>
