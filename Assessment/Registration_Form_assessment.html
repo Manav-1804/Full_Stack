@@ -25,25 +25,25 @@
       color: #333;
     }
 
-    .form-group {
+    .form {
       margin-bottom: 15px;
       position: relative;
     }
 
-    .form-group i {
+    .form i {
       position: absolute;
       top: 10px;
       left: 10px;
       color: #555;
     }
 
-    .form-group input, .form-group select {
+    .form input, .form select {
       width: 100%;
       padding: 10px 10px 10px 35px;
       box-sizing: border-box;
     }
 
-    .form-group label {
+    .form label {
       display: block;
       margin-bottom: 5px;
     }
@@ -54,12 +54,12 @@
       margin-top: 5px;
     }
 
-    .gender-options {
+    .gender {
       display: flex;
       gap: 10px;
     }
 
-    .gender-options label {
+    .gender label {
     display: flex;
       margin-right: 10px;
     }
@@ -93,40 +93,40 @@
   <div class="container">
     <h2><i class="fas fa-user-plus"></i> Registration Form</h2>
     <form id="registrationForm" novalidate>
-      <div class="form-group">
+      <div class="form">
         <i class="fas fa-user"></i>
         <input type="text" id="firstName" placeholder="First Name">
       </div>
 
-      <div class="form-group">
+      <div class="form">
         <i class="fas fa-user"></i>
         <input type="text" id="lastName" placeholder="Last Name">
       </div>
 
-      <div class="form-group">
+      <div class="form">
         <i class="fas fa-envelope"></i>
         <input type="email" id="email" placeholder="Email">
       </div>
 
-      <div class="form-group">
+      <div class="form">
         <i class="fas fa-lock"></i>
         <input type="password" id="password" placeholder="Password">
       </div>
 
-      <div class="form-group">
+      <div class="form">
         <i class="fas fa-lock"></i>
         <input type="password" id="confirmPassword" placeholder="Confirm Password">
       </div>
 
-      <div class="form-group">
+      <div class="form">
         <label>Gender:</label>
-        <div class="gender-options">
+        <div class="gender">
           <label><input type="radio" name="gender" value="Male"> Male</label>
           <label><input type="radio" name="gender" value="Female"> Female</label>
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form">
         <label for="country">Select Country:</label>
         <select id="country">
           <option value="">-- Select Country --</option>
@@ -141,7 +141,7 @@
         </select>
       </div>
 
-      <div class="form-group">
+      <div class="form">
         <i class="fas fa-phone"></i>
         <input type="text" id="mobile" placeholder="Mobile Number" maxlength="10">
       </div>
@@ -176,7 +176,7 @@
    
       document.querySelectorAll('.error').forEach(e => e.remove());
 
-      const fields = [
+      const datas = [
         { id: 'firstName', label: 'First Name' },
         { id: 'lastName', label: 'Last Name' },
         { id: 'email', label: 'Email' },
@@ -185,10 +185,10 @@
         { id: 'mobile', label: 'Mobile Number' }
       ];
 
-      fields.forEach(field => {
-        const input = document.getElementById(field.id);
+      datas.forEach(data => {
+        const input = document.getElementById(data.id);
         if (input.value.trim() === '') {
-          createErrorMessage(input, `${field.label} is required.`);
+          createErrorMessage(input, `${data.label} is required.`);
           isValid = false;
         }
       });
