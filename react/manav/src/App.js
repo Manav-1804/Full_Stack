@@ -5,7 +5,8 @@ import Classstats from './Stats/ClassState';
 import Mainstate from './Stats/Mainstate';
 import Useeffect from './UseEffect.jsx/Useeffect';
 import Usetable from './UseEffect.jsx/Usetable';
-
+import Usecard from './UseEffect.jsx/Usecard';
+import Usecard1 from './UseEffect.jsx/Usecard1';
 function App() {
   return (
     <div>
@@ -16,7 +17,10 @@ function App() {
 
       {/* <Useeffect /> */}
 
-      <Usetable />
+      {/* <Usetable /> */}
+      <Usecard />
+      {/* <Usecard1 /> */}
+
     </div>
   );
 }
