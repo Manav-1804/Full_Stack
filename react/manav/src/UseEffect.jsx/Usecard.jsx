@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Usecard() {
 
@@ -32,7 +32,7 @@ function Usecard() {
                       <h5 className="card-title">{title}</h5>
                           <h5 className="card-title">{price} $</h5>
                       <p className="card-text">{description.slice(0,100)}...</p>
-                      <a href="#" className="btn btn-primary">Go somewhere</a>
+                      <button className="btn btn-primary">Go somewhere</button>
                     </div>
                   </div>
                 </div>
