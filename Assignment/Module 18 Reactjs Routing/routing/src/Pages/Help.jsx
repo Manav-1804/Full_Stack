@@ -2,14 +2,14 @@ import React from 'react'
 import Header from '../Common/Header'
 import Footer from '../Common/Footer'
 
-function Contact() {
+function Help() {
   return (
     <div>
         <Header />
-        <h1 className='p-5 bg-danger'>This is contact page</h1>
+        <h1 className='p-5 bg-dark text-white'>This is help page</h1>
         <Footer />
     </div>
   )
 }
 
-export default Contact
+export default Help
