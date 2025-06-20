@@ -6,7 +6,7 @@ import './App.css';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
-import Help from './Pages/Help';
+
 
 
 
@@ -17,9 +17,9 @@ function App() {
      
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/manav" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/help" element={<Help />} />
+
           
       </Routes>
       
