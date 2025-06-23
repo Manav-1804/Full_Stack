@@ -1,0 +1,114 @@
+{
+    "admin": [
+        {
+            "id": "1",
+            "name": "Admin",
+            "email": "admin@gmail.com",
+            "password": "1234"
+        },
+        {
+            "id": "2",
+            "name": "subAdmin",
+            "email": "admin1@gmail.com",
+            "password": "4321"
+        }
+    ],
+    "user": [
+        {
+            "id": "1",
+            "name": "user1",
+            "email": "user1@gmail.com",
+            "password": "1234",
+            "img": "https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "status": "unblock"
+        },
+        {
+            "id": "2",
+            "name": "user2",
+            "email": "user2@gmail.com",
+            "password": "4321",
+            "img": "https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "status": "block"
+        },
+        {
+            "id": "3",
+            "name": "user3",
+            "email": "user3@gmail.com",
+            "password": "123456",
+            "img": "https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "status": "unblock"
+        },
+        {
+            "id": "1746686137151",
+            "name": "nishil1 patel",
+            "email": "nishil@gmail.com",
+            "password": "123456",
+            "img": "https://images.pexels.com/photos/36355/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+            "status": "unblock"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "image": "https://img.freepik.com/free-photo/hands-holding-tickets-close-up_23-2149080808.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+            "desc": "Hello this is Job visa",
+            "title": "Job Visa"
+        },
+        {
+            "id": "2",
+            "image": "https://img.freepik.com/premium-photo/young-businesscouple-choosing-trip-with-agent-sitting-travel-agency-office-with-world-map-background_506452-3166.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+            "desc": "Hello this is Business visa",
+            "title": "Business Visa"
+        },
+        {
+            "id": "3",
+            "image": "https://img.freepik.com/free-photo/top-view-green-card-passport_23-2149828123.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+            "desc": "Hello this is Diplomatic visa",
+            "title": "Diplometic Visa"
+        },
+        {
+            "id": "4",
+            "image": "https://img.freepik.com/premium-photo/pretty-woman-smiling-happily-with-friendly-confident-positive-look-offering-showing-object-concept_1194-145272.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+            "desc": "Hello this is Student visa",
+            "title": "Students Visa"
+        },
+        {
+            "id": "5",
+            "image": "https://img.freepik.com/free-photo/medium-shot-smiley-couple-with-documents_23-2149272139.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+            "desc": "Hello this is Residance visa",
+            "title": "Residence Visa"
+        },
+        {
+            "id": "6",
+            "image": "https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+            "desc": "Hello this is Tourist visa",
+            "title": "Tourist Visa"
+        }
+],
+"about":[
+    {
+       "id":"1",
+       "logo":"https://img.freepik.com/premium-photo/closeup-ruffled-brazil-flag-brazil-flag-blowing-wind_6724-205.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+       "title":"Brazil",
+       "img":"https://img.freepik.com/free-photo/two-friends-dancing-outside-city_23-2149295763.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740" 
+    },
+    {
+       "id":"2",
+       "logo":"https://img.freepik.com/free-photo/flag-india_1401-132.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+       "title":"India",
+       "img":"https://img.freepik.com/premium-photo/low-angle-view-building_1048944-3647912.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740" 
+    },
+    {
+       "id":"3",
+       "logo":"https://img.freepik.com/premium-vector/american-flag-official-size-color-standards-vector-illustration_1143296-4775.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+       "title":"USA",
+       "img":"https://img.freepik.com/free-photo/statue-liberty-new-york-city-skyline-usa_268835-777.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740" 
+    },
+    {
+       "id":"4",
+       "logo":"https://img.freepik.com/free-photo/flag-italy_1401-137.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+       "title":"ITALY",
+       "img":"https://img.freepik.com/free-photo/breathtaking-shot-colosseum-amphitheatre-located-rome-italy_181624-41196.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740" 
+    }
+]
+}
