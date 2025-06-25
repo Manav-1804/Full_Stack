@@ -12,6 +12,7 @@ import NotFound from "./Website/Pages/NotFound";
 import Dashboard from "./Admin/APages/Dashboard";
 import Servicemanage from "./Admin/APages/Servicemanage";
 import Trainingmanage from "./Admin/APages/Trainingmanage";
+import Aboutmanage from "./Admin/APages/Aboutmanage";
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/dash" element={<Dashboard />} />
         <Route path="/servicemanage" element={<Servicemanage />}/>
         <Route path="/tmanage" element={<Trainingmanage />} />
+        <Route path="/amanage" element={<Aboutmanage />}/>
         </Routes>
 
        

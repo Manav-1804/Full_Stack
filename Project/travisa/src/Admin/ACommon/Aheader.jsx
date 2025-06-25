@@ -48,6 +48,7 @@ function Aheader() {
                                 <NavLink to="/dash" className="nav-item nav-link ">Dashboard</NavLink>
                                 <NavLink to="/tmanage"className="nav-item nav-link">Training</NavLink>
                                 <NavLink  to="/servicemanage"className="nav-item nav-link">Service</NavLink>
+                                <NavLink  to="/amanage"className="nav-item nav-link">About</NavLink>
                                 <div className="nav-item dropdown">
                                     <a href="#" className="nav-link" data-bs-toggle="dropdown"><span className="dropdown-toggle">Pages</span></a>
                                     <div className="dropdown-menu m-0">
