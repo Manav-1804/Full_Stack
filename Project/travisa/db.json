@@ -51,37 +51,37 @@
         {
             "id": "1",
             "image": "https://img.freepik.com/free-photo/hands-holding-tickets-close-up_23-2149080808.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
-            "desc": "Hello this is Job visa",
+            "desc": "Get expert guidance for securing your job visa and starting your international career journey.",
             "title": "Job Visa"
         },
         {
             "id": "2",
             "image": "https://img.freepik.com/premium-photo/young-businesscouple-choosing-trip-with-agent-sitting-travel-agency-office-with-world-map-background_506452-3166.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
-            "desc": "Hello this is Business visa",
+            "desc": "Professional assistance for obtaining your business visa smoothly and successfully.",
             "title": "Business Visa"
         },
         {
             "id": "3",
             "image": "https://img.freepik.com/free-photo/top-view-green-card-passport_23-2149828123.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
-            "desc": "Hello this is Diplomatic visa",
+            "desc": "Specialized support for obtaining diplomatic visas with accuracy and confidentiality.",
             "title": "Diplometic Visa"
         },
         {
             "id": "4",
             "image": "https://img.freepik.com/premium-photo/pretty-woman-smiling-happily-with-friendly-confident-positive-look-offering-showing-object-concept_1194-145272.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
-            "desc": "Hello this is Student visa",
+            "desc": "Expert guidance for securing your student visa and starting your international education journey.",
             "title": "Students Visa"
         },
         {
             "id": "5",
             "image": "https://img.freepik.com/free-photo/medium-shot-smiley-couple-with-documents_23-2149272139.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
-            "desc": "Hello this is Residance visa",
+            "desc": "Reliable assistance for obtaining your residence visa and settling abroad with ease.",
             "title": "Residence Visa"
         },
         {
             "id": "6",
             "image": "https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
-            "desc": "Hello this is Tourist visa",
+            "desc": "Hassle-free tourist visa services to help you explore the world with ease.",
             "title": "Tourist Visa"
         }
 ],
@@ -89,13 +89,13 @@
     {
        "id":"1",
        "logo":"https://img.freepik.com/premium-photo/closeup-ruffled-brazil-flag-brazil-flag-blowing-wind_6724-205.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
-       "title":"Brazil",
+       "title":"BRAZIL",
        "img":"https://img.freepik.com/free-photo/two-friends-dancing-outside-city_23-2149295763.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740" 
     },
     {
        "id":"2",
        "logo":"https://img.freepik.com/free-photo/flag-india_1401-132.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
-       "title":"India",
+       "title":"INDIA",
        "img":"https://img.freepik.com/premium-photo/low-angle-view-building_1048944-3647912.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740" 
     },
     {
@@ -109,6 +109,32 @@
        "logo":"https://img.freepik.com/free-photo/flag-italy_1401-137.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
        "title":"ITALY",
        "img":"https://img.freepik.com/free-photo/breathtaking-shot-colosseum-amphitheatre-located-rome-italy_181624-41196.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740" 
+    }
+],
+"training":[
+    {
+        "id":"1",
+        "title":"IELTS Coaching",
+        "img":"https://img.freepik.com/free-photo/people-learning-new-language-work_23-2149300768.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+        "desc":"Expert IELTS coaching to boost your scores in Listening, Reading, Writing, and Speaking."
+    },
+      {
+        "id":"2",
+        "title":"TOEFL Coaching",
+        "img":"https://img.freepik.com/premium-photo/smiling-woman-throwing-paper-airplane-while-sitting-desk-office_658385-1174.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+        "desc":"Comprehensive TOEFL coaching to enhance your English skills and maximize your test score."
+    },
+      {
+        "id":"3",
+        "title":"PTE Coaching ",
+        "img":"https://img.freepik.com/premium-photo/young-cute-couple-choosing-trip_280538-3460.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+        "desc":"Effective PTE coaching to improve your English proficiency and achieve your desired score."
+    },
+      {
+        "id":"4",
+        "title":"OET Coaching",
+        "img":"https://img.freepik.com/free-photo/front-view-woman-holding-passport_23-2148580967.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
+        "desc":"Focused OET coaching to help healthcare professionals excel in English communication and pass the test confidently."
     }
 ]
 }
