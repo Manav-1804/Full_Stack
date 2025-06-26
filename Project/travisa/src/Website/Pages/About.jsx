@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+
 import Header from '../Common/Header'
 import Nav from '../Common/Nav'
 import Footer from '../Common/Footer'
@@ -178,7 +178,8 @@ function About() {
                                         <img src={data.logo} style={{width:"100%"}} className="img-fluid rounded-circle" alt="Image" />
                                     </div>
                                     <div className="country-name">
-                                        <a href="#" className="text-white fs-4">Brazil</a>
+                                        <a href="#" className="text-white fs-4">{data.title}</a>
+                                        
                                     </div>
                                 </div>
                             </div>
