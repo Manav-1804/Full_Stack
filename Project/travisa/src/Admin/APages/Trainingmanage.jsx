@@ -36,7 +36,7 @@ function Trainingmanage() {
             <Aheader />
             <Anav title="Training Manage" name="Training" />
             <div className="container py-5">
-                <h1 className='text-center'>Hello this Trining Manage</h1>
+                <h1 className='text-center'>Hello this Training Manage</h1>
                 <table className="table">
                     <thead>
                         <tr className='text-center'>

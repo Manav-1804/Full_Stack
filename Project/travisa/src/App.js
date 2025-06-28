@@ -13,6 +13,9 @@ import Dashboard from "./Admin/APages/Dashboard";
 import Servicemanage from "./Admin/APages/Servicemanage";
 import Trainingmanage from "./Admin/APages/Trainingmanage";
 import Aboutmanage from "./Admin/APages/Aboutmanage";
+import Serviceadd from "./Admin/APages/Serviceadd";
+import { ToastContainer } from "react-toastify";
+import Trainingadd from "./Admin/APages/Trainingadd";
 
 
 
@@ -20,6 +23,7 @@ function App() {
   return (
     <BrowserRouter >
       <div className="App">
+        <ToastContainer />
         <Routes >
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -36,6 +40,8 @@ function App() {
         <Route path="/servicemanage" element={<Servicemanage />}/>
         <Route path="/tmanage" element={<Trainingmanage />} />
         <Route path="/amanage" element={<Aboutmanage />}/>
+        <Route path="/addservices" element={<Serviceadd />}/>
+        <Route path="/tadd" element={<Trainingadd />}/>
         </Routes>
 
        

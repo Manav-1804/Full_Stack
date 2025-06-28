@@ -46,19 +46,28 @@ function Aheader() {
                         <div className="collapse navbar-collapse" id="navbarCollapse">
                             <div className="navbar-nav ms-auto py-0">
                                 <NavLink to="/dash" className="nav-item nav-link ">Dashboard</NavLink>
-                                <NavLink to="/tmanage"className="nav-item nav-link">Training</NavLink>
-                                <NavLink  to="/servicemanage"className="nav-item nav-link">Service</NavLink>
-                                <NavLink  to="/amanage"className="nav-item nav-link">About</NavLink>
-                                <div className="nav-item dropdown">
-                                    <a href="#" className="nav-link" data-bs-toggle="dropdown"><span className="dropdown-toggle">Pages</span></a>
+                                 <div className="nav-item dropdown">
+                                    <a href="#" className="nav-link" data-bs-toggle="dropdown"><span className="dropdown-toggle">Training</span></a>
                                     <div className="dropdown-menu m-0">
-                                        <NavLink to="/feature" className="dropdown-item">Feature</NavLink>
-                                        <NavLink to="/countries" className="dropdown-item">Countries</NavLink>
-                                        <NavLink to="/test" className="dropdown-item">Testimonial</NavLink>
-                                
+                                        <NavLink  to="/tmanage"className="nav-item nav-link">Training Manage</NavLink>
+                                        <NavLink to="/tadd" className="dropdown-item">Training Add</NavLink>
+                                        
                                     </div>
                                 </div>
                          
+                                
+                                 <div className="nav-item dropdown">
+                                    <a href="#" className="nav-link" data-bs-toggle="dropdown"><span className="dropdown-toggle">Service</span></a>
+                                    <div className="dropdown-menu m-0">
+                                        <NavLink  to="/servicemanage"className="nav-item nav-link">Service Manage</NavLink>
+                                        <NavLink to="/addservices" className="dropdown-item">Service Add</NavLink>
+                                        
+                                    </div>
+                                </div>
+                         
+                                
+                                <NavLink  to="/amanage"className="nav-item nav-link">About</NavLink>
+                               
                             </div>
                             <button className="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search" /></button>
                             <a href className="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Get A Quote</a>
