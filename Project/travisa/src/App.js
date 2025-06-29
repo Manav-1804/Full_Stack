@@ -16,6 +16,7 @@ import Aboutmanage from "./Admin/APages/Aboutmanage";
 import Serviceadd from "./Admin/APages/Serviceadd";
 import { ToastContainer } from "react-toastify";
 import Trainingadd from "./Admin/APages/Trainingadd";
+import Aboutadd from "./Admin/APages/Aboutadd";
 
 
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/amanage" element={<Aboutmanage />}/>
         <Route path="/addservices" element={<Serviceadd />}/>
         <Route path="/tadd" element={<Trainingadd />}/>
+        <Route path="/aadd" element={<Aboutadd />}/>
         </Routes>
 
        

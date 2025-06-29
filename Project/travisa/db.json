@@ -121,6 +121,18 @@
       "logo": "https://img.freepik.com/free-photo/flag-italy_1401-137.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740",
       "title": "ITALY",
       "img": "https://img.freepik.com/free-photo/breathtaking-shot-colosseum-amphitheatre-located-rome-italy_181624-41196.jpg?uid=R193479995&ga=GA1.1.741117527.1743056014&semt=ais_hybrid&w=740"
+    },
+    {
+      "id": "1751207207074",
+      "title": "AUSTRALIA",
+      "img": "https://media.istockphoto.com/id/1340727526/vector/flags-of-australia-vector-icon-illustration.jpg?s=612x612&w=0&k=20&c=tyL_HkGKsFGnwMh41AdnfXSke7BlUaVNJewEgWzDYLQ=",
+      "logo": "https://media.istockphoto.com/id/1340727526/vector/flags-of-australia-vector-icon-illustration.jpg?s=612x612&w=0&k=20&c=tyL_HkGKsFGnwMh41AdnfXSke7BlUaVNJewEgWzDYLQ="
+    },
+    {
+      "id": "1751207575371",
+      "title": "Bali",
+      "img": "https://www.gtholidays.in/wp-content/uploads/2022/11/Famous-Tourist-Places-Bali.jpg",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Flag_of_Bali.svg"
     }
   ],
   "training": [

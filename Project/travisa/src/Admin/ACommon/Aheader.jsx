@@ -65,8 +65,15 @@ function Aheader() {
                                     </div>
                                 </div>
                          
+                                <div className="nav-item dropdown">
+                                    <a href="#" className="nav-link" data-bs-toggle="dropdown"><span className="dropdown-toggle">About</span></a>
+                                    <div className="dropdown-menu m-0">
+                                        <NavLink  to="/amanage"className="nav-item nav-link">About Manage</NavLink>
+                                        <NavLink to="/aadd" className="dropdown-item">About Add</NavLink>
+                                        
+                                    </div>
+                                </div>
                                 
-                                <NavLink  to="/amanage"className="nav-item nav-link">About</NavLink>
                                
                             </div>
                             <button className="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search" /></button>
