@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Aheader from '../ACommon/Aheader'
 import Anav from '../ACommon/Anav'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 function Aboutmanage() {
     const [about, setabout] = useState([])
@@ -27,6 +28,13 @@ function Aboutmanage() {
         const res = await axios.get(`http://localhost:3000/about/${id}`)
         console.log(res.data)
         setsinglepro(res.data)
+    }
+
+    const deletepro = async (id) => {
+        const res = await axios.delete(`http://localhost:3000/about/${id}`)
+        // console.log(res.data)
+        toast.success("Product delete successfully..!")
+        fetchdata()
     }
 
     return (
@@ -64,7 +72,7 @@ function Aboutmanage() {
                                         <td>
                                             <button className='btn btn-info' data-bs-toggle="modal" data-bs-target="#staticBackdrop" onClick={() => product(data.id)}  >View</button>
                                             <button className='btn btn-success mx-2'>Edit</button>
-                                            <button className='btn btn-danger'>Delete</button>
+                                            <button className='btn btn-danger' onClick={() => deletepro(data.id)}>Delete</button>
                                         </td>
                                     </tr>
                                 )

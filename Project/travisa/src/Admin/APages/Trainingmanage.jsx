@@ -1,5 +1,5 @@
 
-
+import { toast } from 'react-toastify'
 import axios from 'axios'
 import Aheader from '../ACommon/Aheader'
 import Anav from '../ACommon/Anav'
@@ -28,8 +28,15 @@ function Trainingmanage() {
         const res = await axios.get(`http://localhost:3000/training/${id}`)
         console.log(res.data)
         setdoublepro(res.data)
-    }
 
+        
+    }
+const deletepro = async (id) => {
+        const res = await axios.delete(`http://localhost:3000/training/${id}`)
+        // console.log(res.data)
+        toast.success("Product delete successfully..!")
+        fetchdata()
+    }
 
     return (
         <div>
@@ -63,7 +70,7 @@ function Trainingmanage() {
                                         <td>
                                             <button className='btn btn-info'  data-bs-toggle="modal" data-bs-target="#staticBackdrop" onClick={() => product(data.id)}>View</button>
                                             <button className='btn btn-success mx-2'>Edit</button>
-                                            <button className='btn btn-danger'>Delete</button>
+                                            <button className='btn btn-danger' onClick={() => deletepro(data.id)}>Delete</button>
                                         </td>
                                     </tr>
                                 )
