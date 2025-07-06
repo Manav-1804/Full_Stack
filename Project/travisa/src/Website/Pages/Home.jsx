@@ -1,11 +1,11 @@
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '../Common/Header'
 import Footer from '../Common/Footer'
 import axios from 'axios'
 
 function Home() {
 
-const [services, setservices] = useState([])
+    const [services, setservices] = useState([])
 
     useEffect(() => {
         fetchdata()
@@ -18,16 +18,16 @@ const [services, setservices] = useState([])
     }, [])
 
     const [train, settrain] = useState([])
-        
-            useEffect(() => {
-                fetchdata()
-            }, [])
-     const fetchdata = async () => {
+
+    useEffect(() => {
+        fetchdata()
+    }, [])
+    const fetchdata = async () => {
         const res = await axios.get("http://localhost:3000/services")
         // console.log(res.data)
         setservices(res.data)
 
-           const ras = await axios.get("http://localhost:3000/training")
+        const ras = await axios.get("http://localhost:3000/training")
         // console.log(res.data)
         settrain(ras.data)
 
@@ -35,8 +35,8 @@ const [services, setservices] = useState([])
         const rks = await axios.get("http://localhost:3000/about")
         // console.log(ras.data)
         setabout(rks.data)
-     }
-    
+    }
+
     return (
         <div>
             <Header />
@@ -239,35 +239,35 @@ const [services, setservices] = useState([])
                         </div>
                         <div className="row g-4">
                             {
-                            services && services.map((data) => {
-                                return (
-                                    <div className="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div className="service-item">
-                                            <div className="service-inner">
-                                                <div className="service-img">
-                                                    <img src={data.image} style={{ height: "300px" }} className="img-fluid w-100 rounded" alt="Image" />
-                                                </div>
-                                                <div className="service-title">
-                                                    <div className="service-title-name">
-                                                        <div className="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                                            <a href="#" className="h4 text-white mb-0">{data.title}</a>
-                                                        </div>
-                                                        <a className="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+                                services && services.map((data) => {
+                                    return (
+                                        <div className="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                                            <div className="service-item">
+                                                <div className="service-inner">
+                                                    <div className="service-img">
+                                                        <img src={data.image} style={{ height: "300px" }} className="img-fluid w-100 rounded" alt="Image" />
                                                     </div>
-                                                    <div className="service-content pb-4">
-                                                        <a href="#"><h4 className="text-white mb-4 py-3">{data.title}</h4></a>
-                                                        <div className="px-4">
-                                                            <p className="mb-4">{data.desc}</p>
-                                                            <a className="btn btn-primary border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
+                                                    <div className="service-title">
+                                                        <div className="service-title-name">
+                                                            <div className="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                                                <a href="#" className="h4 text-white mb-0">{data.title}</a>
+                                                            </div>
+                                                            <a className="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+                                                        </div>
+                                                        <div className="service-content pb-4">
+                                                            <a href="#"><h4 className="text-white mb-4 py-3">{data.title}</h4></a>
+                                                            <div className="px-4">
+                                                                <p className="mb-4">{data.desc}</p>
+                                                                <a className="btn btn-primary border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                )
-                            })
-                        }
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
@@ -350,25 +350,25 @@ const [services, setservices] = useState([])
                         </div>
                         <div className="row g-4 text-center">
                             {
-                            about && about.map((data) => {
-                                return(
-                                     <div className="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
-                                <div className="country-item">
-                                    <div className="rounded overflow-hidden">
-                                        <img src={data.img} style={{height:"300px"}} className="img-fluid w-100 rounded" alt="Image" />
-                                    </div>
-                                    <div className="country-flag">
-                                        <img src={data.logo} style={{width:"100%"}} className="img-fluid rounded-circle" alt="Image" />
-                                    </div>
-                                    <div className="country-name">
-                                        <a href="#" className="text-white fs-4">{data.title}</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                                )
-                            })
-                           }
+                                about && about.map((data) => {
+                                    return (
+                                        <div className="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
+                                            <div className="country-item">
+                                                <div className="rounded overflow-hidden">
+                                                    <img src={data.img} style={{ height: "300px" }} className="img-fluid w-100 rounded" alt="Image" />
+                                                </div>
+                                                <div className="country-flag">
+                                                    <img src={data.logo} style={{ width: "100%" }} className="img-fluid rounded-circle" alt="Image" />
+                                                </div>
+                                                <div className="country-name">
+                                                    <a href="#" className="text-white fs-4">{data.title}</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
                             <div className="col-12">
                                 <a className="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Countries</a>
                             </div>

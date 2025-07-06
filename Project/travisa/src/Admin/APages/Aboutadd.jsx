@@ -41,7 +41,7 @@ function Aboutadd() {
             const res = await axios.post("http://localhost:3000/about", form)
             console.log(res.data)
             redirect("/amanage")
-             toast.success("Training Add successfully..!")
+             toast.success("Country Add successfully..!")
             setform({
                 id: "",
                 title: "",
@@ -81,12 +81,12 @@ function Aboutadd() {
                              <div className="col-12">
                                 <div className="form-floating">
                                     <input type="url" value={form.logo} name='logo' onChange={getchnage} className="form-control" id="logo" placeholder="logo" />
-                                    <label htmlFor="subject">Your image</label>
+                                    <label htmlFor="subject">Your Logo</label>
                                 </div>
                             </div>
                            
                             <div className="col-12">
-                                <button className="btn btn-primary w-100 py-3">Service add</button>
+                                <button className="btn btn-primary w-100 py-3">Country add</button>
                             </div>
                         </div>
                     </form>
