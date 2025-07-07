@@ -53,14 +53,14 @@ function Header() {
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div className="dropdown-menu m-0">
                                     <NavLink to="/classes" className="dropdown-item">Our classes</NavLink>
-                                    <a href="training.html" className="dropdown-item">Dance Training</a>
-                                    <a href="team.html" className="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                                    <a href="gallery.html" className="dropdown-item">Dance Gallery</a>
-                                    <NavLink to="/*" className="dropdown-item">404 Page</NavLink>
+                                    <NavLink to="/dance" className="dropdown-item">Dance Training</NavLink>
+                                    <NavLink to="/team" className="dropdown-item">Our Team</NavLink>
+                                    <NavLink to="/test" className="dropdown-item">Testimonial</NavLink>
+                                    <NavLink to="/gallery" className="dropdown-item">Dance Gallery</NavLink>
+                                    
                                 </div>
                             </div>
-                            <a href="contact.html" className="nav-item nav-link">Contact Us</a>
+                            <NavLink to="/contact" className="nav-item nav-link">Contact Us</NavLink>
                         </div>
                         <a href="#" className="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Register Now</a>
                     </div>
