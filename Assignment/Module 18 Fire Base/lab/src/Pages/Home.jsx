@@ -4,7 +4,7 @@ import Producttable from '../Component/Producttable'
 function Home() {
   return (
     <div>
-        {/* <Producttable /> */}
+        <Producttable />
     </div>
   )
 }

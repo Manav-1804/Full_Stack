@@ -6,12 +6,11 @@ function AddProduct() {
     products,
     setProducts,
     addProduct,
-    editProducts,
    
   } = useContext(Mycontext);
 
   // Check whether we are in edit mode
-  const isEditing = !!products.id;
+  // const isEditing = !!products.id;
 
   const handleChange = (e) => {
     setProducts({ ...products, [e.target.name]: e.target.value });
@@ -19,7 +18,7 @@ function AddProduct() {
 
   return (
     <div className="container mt-4">
-      <h3 className="mb-4">{isEditing ? 'Edit Shoe' : 'Add New Shoe'}</h3>
+      <h3 className="mb-4">Add Form</h3>
       <form>
         <div className="mb-3">
           <label className="form-label">Company Name</label>
@@ -81,17 +80,7 @@ function AddProduct() {
           />
         </div>
 
-        <div className="mb-3">
-          <label className="form-label">Shoe Color</label>
-          <input
-            type="text"
-            className="form-control"
-            name="shoecolor"
-            value={products.shoecolor}
-            onChange={handleChange}
-            placeholder="e.g. Red, White"
-          />
-        </div>
+        
 
         <div className="mb-3">
           <label className="form-label">Rating</label>
@@ -110,10 +99,10 @@ function AddProduct() {
 
         <button
           type="button"
-          className={`btn ${isEditing ? 'btn-warning' : 'btn-primary'} me-2`}
-          onClick={isEditing ? editProducts : addProduct}
+          className="btn btn-info me-2"
+           onClick={addProduct}
         >
-          {isEditing ? 'Update Product' : 'Add Product'}
+          add produt
         </button>
       </form>
     </div>

@@ -3,6 +3,8 @@ import MyState from "./Context/data/Mystate";
 import Home from "./Pages/Home";
 import AddProduct from "./Pages/Addproduct";
 
+import UpdateProduct from "./Pages/UpdateProduct";
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/addproduct" element={<AddProduct />}/>
+        <Route path="/updateproduct" element={<UpdateProduct />}/>
       </Routes>
       </BrowserRouter>
     </MyState>
