@@ -97,7 +97,7 @@ function AddProduct() {
           />
         </div>
 
-        <button
+        <button to="/"
           type="button"
           className="btn btn-info me-2"
            onClick={addProduct}

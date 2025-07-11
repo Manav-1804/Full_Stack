@@ -3,16 +3,13 @@ import Mycontext from '../Context/data/Mycontext';
 import { Link, useNavigate } from 'react-router-dom';
 
 
-
-
 function Producttable() {
   const context = useContext(Mycontext);
-const navigate = useNavigate()
-  const { allProducts, deleteProduct, setProducts } = context
- const handleEdit = (product) => {
-    setProducts(product); // ✅ Set selected product in context
-    console.log(product)
-    navigate('/updateproduct');  // ✅ Then navigate
+  const navigate = useNavigate()
+  const { allProducts, deleteProduct, setEditProductData } = context
+  const handleEdit = (data) => {
+    setEditProductData(data); // ✅ store the product for update
+    navigate('/updateproduct');  // ✅ redirect to form
   };
   console.log(allProducts)
   return (
@@ -21,7 +18,7 @@ const navigate = useNavigate()
         <div className="card-body bg-dark text-white d-flex flex-wrap justify-content-between align-items-center">
 
           <div className="d-flex align-items-center gap-2 mb-2 mb-md-0">
-            <img src="/img/react.png" alt="React" style={{ width: "36px" }} />
+            {/* <img src="/img/react.png" alt="React" style={{ width: "36px" }} /> */}
             <h5 className="mb-0 fw-semibold">React Firebase CRUD</h5>
           </div>
           <Link to="/addproduct">
@@ -46,30 +43,27 @@ const navigate = useNavigate()
           </thead>
           <tbody>
             {allProducts.length > 0 ? (
-              allProducts.map((value) => (
-                <tr key={value.id}>
-                  <td>{value.id}</td>
-                  <td>{value.shoename}</td>
+              allProducts.map((product) => (
+                <tr key={product.id}>
+                  <td>{product.id}</td>
+                  <td>{product.shoename}</td>
                   <td>
-                    <img src={value.image} alt={value.shoename} width="80" />
+                    <img src={product.image} alt={product.shoename} width="80" />
                   </td>
-                  <td>{value.companyname}</td>
-                  <td>{value.price} INR</td>
-                  <td>{value.size}</td>
+                  <td>{product.companyname}</td>
+                  <td>{product.price} INR</td>
+                  <td>{product.size}</td>
 
-                  <td>{value.rating} ⭐</td>
+                  <td>{product.rating} ⭐</td>
                   <td>
-                    <button
-                      onClick={() => {
-                        handleEdit(value)
-                      }}
-                      className="font-medium bg-green-300 px-4 rounded-lg py-1 text-black cursor-pointer"
-                    >
+                    <button to="/updateproduct"
+                      onClick={() => handleEdit(product)}
+                      className="btn btn-sm btn-success mb-2">
                       Edit
                     </button>
 
                     <br></br>
-                    <Link onClick={() => deleteProduct(value)}
+                    <Link onClick={() => deleteProduct(product)}
                       className="font-medium bg-red-300 px-4 rounded-lg py-1 text-danger cursor-pointer  ">Delete</Link>
                   </td>
                 </tr>

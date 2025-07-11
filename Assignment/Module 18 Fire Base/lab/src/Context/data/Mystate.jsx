@@ -1,33 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import {
-    addDoc,
-    collection,
-    deleteDoc,
-    doc,
-    onSnapshot,
-    
-    query,
-    setDoc,
-} from 'firebase/firestore';
-import { fireDb } from '../../Firebase/Firebase';
+import React, { useState, useEffect } from 'react';
 import Mycontext from './Mycontext';
+import { collection, onSnapshot, doc, deleteDoc, setDoc, query, orderBy } from 'firebase/firestore';
+import { fireDb } from '../../Firebase/Firebase';
 
 function MyState(props) {
-    // Initial product state
-    const [products, setProducts] = useState({
-        id :"",
-        companyname: "",
-        shoename: "",
-        image: "",
-        price: "",
-        size: "",
-        rating: ""
-    });
-
-    // All products from DB
-    const [allProducts, setAllProducts] = useState([]);
-
-    const getshoes = () => {
+  const [allProducts, setAllProducts] = useState([]);
+  const [products, setProducts] = useState({
+    companyname: '',
+    shoename: '',
+    image: '',
+    price: '',
+    size: '',
+    rating: ''
+  });
+   const getshoes = () => {
         const q = query(collection(fireDb,'Shoe'));
 
         const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
@@ -44,103 +30,58 @@ function MyState(props) {
         return () => unsubscribe();
     },[]);
 
-    useEffect(() => {
-        console.log(allProducts);
-    },[allProducts]);
-    const addProduct = async () => {
-        // Validate fields
-        const { companyname, shoename, image, price, size,  rating } = products;
+  const [editProductData, setEditProductData] = useState(null);
 
-        if (!companyname || !shoename || !image || !price || !size  || !rating) {
-            return alert("All fields are required");
-        }
+  
 
-        try {
-            const productRef = collection(fireDb, "Shoe");
-            await addDoc(productRef, {
-                ...products
-            });
-            getshoes();
-            alert("Product added successfully!");
-            setTimeout(() => {
-                window.location.href = "/";
-            }, 800);
-            setProducts({
-                companyname: "",
-                shoename: "",
-                image: "",
-                price: "",
-                size: "",
-                // shoecolor: "",
-                rating: ""
-            });
-        } catch (error) {
-            console.error("Add Error:", error);
-        }
-    };
+  const editProducts = async (updatedData) => {
+    try {
+      await setDoc(doc(fireDb, 'Shoe', updatedData.id), updatedData);
+      alert('Product updated successfully');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-    // Fetch all products
+  const deleteProduct = async (product) => {
+    try {
+      await deleteDoc(doc(fireDb, 'Shoe', product.id));
+      alert('Product deleted successfully');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-   
+  useEffect(() => {
+  const q = collection(fireDb, 'Shoe'); // No orderBy
+  const unsubscribe = onSnapshot(q, (snapshot) => {
+    const productList = snapshot.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id
+    }));
+    console.log('Fetched products:', productList); // Debug log
+    setAllProducts(productList);
+  });
 
+  return () => unsubscribe();
+}, []);
 
-    // Set selected product to form
-    const editProducthandle = (item) => {
-        setProducts(item);
-        console.log(item)
-    };
-
-    // Save edited product
-    const editProducts = async () => {
-        try {
-            await setDoc(doc(fireDb, 'Shoe', products.id), products);
-            getshoes();
-            alert("Product updated successfully!");
-            setTimeout(() => {
-                window.location.href = "/";
-            }, 800);
-            setProducts({
-                companyname: "",
-                shoename: "",
-                image: "",
-                price: "",
-                size: "",
-
-                rating: ""
-            });
-        } catch (error) {
-            console.error("Edit Error:", error);
-        }
-    };
-
-    // Delete product
-    const deleteProduct = async (item) => {
-        try {
-            await deleteDoc(doc(fireDb, "Shoe", item.id));
-            getshoes();
-            alert("Product deleted successfully!");
-        } catch (error) {
-            console.error("Delete Error:", error);
-        }
-    };
-
-    return (
-        <Mycontext.Provider
-            value={{
-                products,
-                setProducts,
-                addProduct,
-                getshoes,
-                allProducts,
-                setAllProducts,
-                editProducthandle,
-                editProducts,
-                deleteProduct,
-            }}
-        >
-            {props.children}
-        </Mycontext.Provider>
-    );
+  return (
+    <Mycontext.Provider
+      value={{
+        products,
+        getshoes,
+        setProducts,
+        // addProduct,
+        allProducts,
+        deleteProduct,
+        editProducts,
+        editProductData,
+        setEditProductData
+      }}>
+      {props.children}
+    </Mycontext.Provider>
+  );
 }
 
 export default MyState;
