@@ -1,0 +1,69 @@
+{
+    "admin": [
+        {
+            "id": "1",
+            "name": "Manav",
+            "email": "manav123@gmail.com",
+            "password": "12345"
+        },
+        {
+            "id": "2",
+            "name": "uttam",
+            "email": "uttam456@gmail.com",
+            "password": "6789"
+        }
+    ],
+    "user": [
+        {
+            "id": "1",
+            "name": "user1",
+            "email": "user1@gmail.com",
+            "password": "1234",
+            "img": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?_gl=1*1peiw4t*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTIzODA1NjEkbzEwJGcxJHQxNzUyMzgwNTgxJGo0MCRsMCRoMA..",
+            "status": "unblock"
+        },
+         {
+            "id": "2",
+            "name": "user1",
+            "email": "user2@gmail.com",
+            "password": "4567",
+            "img":"https://images.pexels.com/photos/32919735/pexels-photo-32919735.jpeg?_gl=1*76nih7*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTIzODA1NjEkbzEwJGcxJHQxNzUyMzgwNjYyJGo0MCRsMCRoMA..",
+            "status": "unblock"
+        },
+         {
+            "id": "3",
+            "name": "user3",
+            "email": "user3@gmail.com",
+            "password": "1357",
+            "img":"https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg?_gl=1*1sby8zy*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTIzODA1NjEkbzEwJGcxJHQxNzUyMzgwNzc1JGoyOCRsMCRoMA..",
+            "status": "unblock"
+        }
+    ],
+    "about":[
+        {
+            "id" :"1",
+            "img" :"https://images.pexels.com/photos/32627505/pexels-photo-32627505.jpeg?_gl=1*o8pw4d*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTIzODI5MDYkbzExJGcxJHQxNzUyMzgyOTUzJGoxMyRsMCRoMA..",
+            "name" : "Leo Carter",
+            "role" : "Instructor "
+        },
+        {
+            "id" :"2",
+            "img" :"https://images.pexels.com/photos/7337618/pexels-photo-7337618.jpeg?_gl=1*itg7st*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTIzODI5MDYkbzExJGcxJHQxNzUyMzgzMjIwJGo2MCRsMCRoMA..",
+            "name" : "Ethan Brooks",
+            "role" : "Artistic Director "
+        },
+         {
+            "id" :"3",
+            "img" :"https://images.pexels.com/photos/32627494/pexels-photo-32627494.jpeg?_gl=1*75mrrv*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTIzODI5MDYkbzExJGcxJHQxNzUyMzgzMzM5JGo2MCRsMCRoMA..",
+            "name" : "Elina Clarke",
+            "role" : "Choreographer"
+        },
+        {
+            "id" :"4",
+            "img" :"https://images.pexels.com/photos/32627056/pexels-photo-32627056.jpeg?_gl=1*1pzlory*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTIzODI5MDYkbzExJGcxJHQxNzUyMzgzNDU0JGo2MCRsMCRoMA..",
+            "name" : "Nova Sullivan",
+            "role" : "Assistant Instructor"
+        }
+    ]
+
+}

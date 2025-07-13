@@ -3,9 +3,22 @@ import { Helmet } from 'react-helmet'
 import Header from '../Common/Header'
 import Footer from '../Common/Footer'
 import Nav from '../Common/Nav'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 function About() {
+    const [about, setabout] = useState([])
 
+    useEffect(() => {
+        fetchdata()
+    }, [])
+
+
+    const fetchdata = async () => {
+        const res = await axios.get("http://localhost:3000/about")
+        console.log(res.data)
+        setabout(res.data)
+    }
     return (
         <div>
             <Helmet>
@@ -103,88 +116,38 @@ function About() {
                 {/* Counter Facts End */}
                 {/* Team Start */}
                 <div className="container-fluid team py-5">
-                    <div className="container py-5">
+                    <div className="container row g-4 text-center">
                         <div className="pb-5">
                             <h4 className="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Dance Teachers</h4>
                             <h1 className="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Our Professional Instructor</h1>
                         </div>
-                        <div className="team-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
-                            <div className="team-item border rounded wow fadeInUp" data-wow-delay="0.1s">
-                                <div className="team-img bg-secondary rounded-top">
-                                    <img src="img/team-1.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                    <div className="team-icon">
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-facebook-f" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-twitter" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-instagram" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-linkedin-in" /></a>
+                       
+                        {
+                            about && about.map((data) => {
+                                return (
+
+                                    <div className="team-carousel owl-carousel  wow fadeInUp" data-wow-delay="0.1s">
+                                        <div className="team-item border rounded wow fadeInUp" data-wow-delay="0.1s">
+                                            <div className="team-img bg-secondary rounded-top">
+                                                <img src={data.img} style={{ height: "300px"}}className="img-fluid rounded-top w-100" alt="Image" />
+                                                <div className="team-icon">
+                                                    <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-facebook-f" /></a>
+                                                    <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-twitter" /></a>
+                                                    <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-instagram" /></a>
+                                                    <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-linkedin-in" /></a>
+                                                </div>
+                                            </div>
+                                            <div className="team-content text-center p-4">
+                                                <a href="#" className="h4">{data.name}</a>
+                                                <p className="mb-0 text-primary">{data.role}</p>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                </div>
-                                <div className="team-content text-center p-4">
-                                    <a href="#" className="h4">Emily Ava</a>
-                                    <p className="mb-0 text-primary">Instructor</p>
-                                </div>
-                            </div>
-                            <div className="team-item border rounded wow fadeInUp" data-wow-delay="0.3s">
-                                <div className="team-img bg-secondary rounded-top">
-                                    <img src="img/team-2.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                    <div className="team-icon">
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-facebook-f" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-twitter" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-instagram" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-linkedin-in" /></a>
-                                    </div>
-                                </div>
-                                <div className="team-content text-center p-4">
-                                    <a href="#" className="h4">Emily Ava</a>
-                                    <p className="mb-0 text-primary">Instructor</p>
-                                </div>
-                            </div>
-                            <div className="team-item border rounded wow fadeInUp" data-wow-delay="0.5s">
-                                <div className="team-img bg-secondary rounded-top">
-                                    <img src="img/team-3.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                    <div className="team-icon">
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-facebook-f" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-twitter" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-instagram" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-linkedin-in" /></a>
-                                    </div>
-                                </div>
-                                <div className="team-content text-center p-4">
-                                    <a href="#" className="h4">Emily Ava</a>
-                                    <p className="mb-0 text-primary">Instructor</p>
-                                </div>
-                            </div>
-                            <div className="team-item border rounded wow fadeInUp" data-wow-delay="0.7s">
-                                <div className="team-img bg-secondary rounded-top">
-                                    <img src="img/team-4.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                    <div className="team-icon">
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-facebook-f" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-twitter" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-instagram" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-linkedin-in" /></a>
-                                    </div>
-                                </div>
-                                <div className="team-content text-center p-4">
-                                    <a href="#" className="h4">Emily Ava</a>
-                                    <p className="mb-0 text-primary">Instructor</p>
-                                </div>
-                            </div>
-                            <div className="team-item border rounded wow fadeInUp" data-wow-delay="0.9s">
-                                <div className="team-img bg-secondary rounded-top">
-                                    <img src="img/team-4.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                    <div className="team-icon">
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-facebook-f" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-twitter" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-instagram" /></a>
-                                        <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-linkedin-in" /></a>
-                                    </div>
-                                </div>
-                                <div className="team-content text-center p-4">
-                                    <a href="#" className="h4">Emily Ava</a>
-                                    <p className="mb-0 text-primary">Instructor</p>
-                                </div>
-                            </div>
-                        </div>
+                                )
+                            })
+                        }
+                        
                     </div>
                 </div>
                 {/* Team End */}
