@@ -1,5 +1,6 @@
 import React from 'react'
 import Aheader from '../Acomman/Aheader'
+import { Link } from 'react-router-dom'
 
 function Anotfound() {
   return (

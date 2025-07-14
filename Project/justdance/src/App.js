@@ -11,7 +11,7 @@ import Testimonial from "./Website/Pages/Testimonial";
 import Dancegallery from "./Website/Pages/Dancegallery";
 import Contact from "./Website/Pages/Contact";
 import Aheader from "./Admin/Acomman/Aheader";
-import Anotfound from "./Admin/Apages/Anotfound";
+
 
 import Aboutamanage from "./Admin/Apages/Aboutmanage";
 
@@ -43,7 +43,7 @@ function App() {
           {/* {Admin Pages} */}
 
           <Route path="/dash" element={<Aheader />}/>
-          <Route path="/*" element={<Anotfound />} />
+          
           <Route path="/aboutmanage" element={<Aboutamanage />} />
         </Routes>
       </div>

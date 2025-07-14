@@ -121,15 +121,17 @@ function About() {
                             <h4 className="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Dance Teachers</h4>
                             <h1 className="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Our Professional Instructor</h1>
                         </div>
-                       
-                        {
-                            about && about.map((data) => {
-                                return (
 
-                                    <div className="team-carousel owl-carousel  wow fadeInUp" data-wow-delay="0.1s">
+                        <div className="team-carousel owl-carousel  wow fadeInUp" data-wow-delay="0.1s">
+
+                            {
+
+                                about && about.map((data) => {
+                                    return (
+
                                         <div className="team-item border rounded wow fadeInUp" data-wow-delay="0.1s">
                                             <div className="team-img bg-secondary rounded-top">
-                                                <img src={data.img} style={{ height: "300px"}}className="img-fluid rounded-top w-100" alt="Image" />
+                                                <img src={data.img} style={{ height: "300px" }} className="img-fluid rounded-top w-100" alt="Image" />
                                                 <div className="team-icon">
                                                     <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-facebook-f" /></a>
                                                     <a className="btn btn-square btn-primary rounded-circle mx-1" href><i className="fab fa-twitter" /></a>
@@ -143,11 +145,12 @@ function About() {
                                             </div>
                                         </div>
 
-                                    </div>
-                                )
-                            })
-                        }
-                        
+
+                                    )
+                                })
+                            }
+                        </div>
+
                     </div>
                 </div>
                 {/* Team End */}
@@ -157,5 +160,7 @@ function About() {
         </div>
     )
 }
+
+
 
 export default About
