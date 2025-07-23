@@ -116,10 +116,10 @@ function About() {
                 {/* Counter Facts End */}
                 {/* Team Start */}
                 <div className="container-fluid team py-5">
-                    <div className="container row g-4 text-center">
+                    <div className="container  text-center">
                         <div className="pb-5">
                             <h4 className="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Dance Teachers</h4>
-                            <h1 className="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Our Professional Instructor</h1>
+                            <h1 className="display-2 mb-0 wow fadeInUp" data-wow-delay="0.2s">Our Professional Instructor</h1>
                         </div>
 
                         <div className="team-carousel owl-carousel  wow fadeInUp" data-wow-delay="0.1s">

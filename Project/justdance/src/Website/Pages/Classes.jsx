@@ -3,7 +3,22 @@ import { Helmet } from 'react-helmet'
 import Header from '../Common/Header'
 import Nav from '../Common/Nav'
 import Footer from '../Common/Footer'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+
+
 function Classes() {
+     const [about, setabout] = useState([])
+
+       useEffect(() => {
+             fetchdata()
+         }, [])
+
+           const fetchdata = async () => {
+        const res = await axios.get("http://localhost:3000/blogs")
+        console.log(res.data)
+        setabout(res.data)
+           }
     return (
         <div>
             <Helmet>
@@ -31,57 +46,28 @@ function Classes() {
                             <h4 className="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Our Dance Classes</h4>
                             <h1 className="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Dance Classes for everyone</h1>
                         </div>
-                        <div className="class-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
-                            <div className="class-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
-                                <div className="class-img rounded-top">
-                                    <img src="img/class-1.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                </div>
-                                <div className="rounded-bottom p-4">
-                                    <a href="#" className="h4 mb-3 d-block">Classical Dance class</a>
-                                    <p className="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                                    <a className="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Explore Details</a>
-                                </div>
-                            </div>
-                            <div className="class-item bg-white rounded wow fadeInUp" data-wow-delay="0.3s">
-                                <div className="class-img rounded-top">
-                                    <img src="img/class-2.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                </div>
-                                <div className="rounded-bottom p-4">
-                                    <a href="#" className="h4 mb-3 d-block">Classical Dance class</a>
-                                    <p className="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                                    <a className="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Explore Details</a>
-                                </div>
-                            </div>
-                            <div className="class-item bg-white rounded wow fadeInUp" data-wow-delay="0.5s">
-                                <div className="class-img rounded-top">
-                                    <img src="img/class-3.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                </div>
-                                <div className="rounded-bottom p-4">
-                                    <a href="#" className="h4 mb-3 d-block">Classical Dance class</a>
-                                    <p className="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                                    <a className="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Explore Details</a>
-                                </div>
-                            </div>
-                            <div className="class-item bg-white rounded wow fadeInUp" data-wow-delay="0.7s">
-                                <div className="class-img rounded-top">
-                                    <img src="img/class-2.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                </div>
-                                <div className="rounded-bottom p-4">
-                                    <a href="#" className="h4 mb-3 d-block">Classical Dance class</a>
-                                    <p className="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                                    <a className="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Explore Details</a>
-                                </div>
-                            </div>
-                            <div className="class-item bg-white rounded wow fadeInUp" data-wow-delay="0.9s">
-                                <div className="class-img rounded-top">
-                                    <img src="img/class-3.jpg" className="img-fluid rounded-top w-100" alt="Image" />
-                                </div>
-                                <div className="rounded-bottom p-4">
-                                    <a href="#" className="h4 mb-3 d-block">Classical Dance class</a>
-                                    <p className="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni vero excepturi blanditiis quidem</p>
-                                    <a className="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Explore Details</a>
-                                </div>
-                            </div>
+                        <div className="class-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
+                            {
+
+                                about && about.map((data) => {
+                                    return (
+
+                                        <div className="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
+                                            <div className="blog-img rounded-top">
+                                                <img src={data.img} style={{height:"250px"}}className="img-fluid rounded-top w-100" alt="Image" />
+                                            </div>
+                                            <div className="bg-light rounded-bottom p-4">
+                                                
+                                                <a href="#" className="h4 mb-3 d-block">{data.title}</a>
+                                                <p className="mb-3">{data.dec.slice(0,100)}</p>
+                                                <a className="btn btn-primary rounded-pill text-white py-2 px-4" href="#">Read More</a>
+                                            </div>
+                                        </div>
+
+
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>

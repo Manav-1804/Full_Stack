@@ -64,6 +64,118 @@
             "name" : "Nova Sullivan",
             "role" : "Assistant Instructor"
         }
+    ],
+
+    "event":[
+        {
+            "id":"1",
+            "img":"https://images.pexels.com/photos/7828574/pexels-photo-7828574.jpeg?_gl=1*1l9ushz*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MDUzMzQkbzEzJGcxJHQxNzUyNTA1NDIyJGo2MCRsMCRoMA..",
+            "time":"08:00AM - 10:00PM",
+            "city" : "Ahmedabad",
+            "title" : "Open House - Springs Dance",
+            "dec" : "Step into the rhythm and explore the joy of dance! Meet our instructors, try free. "
+        },
+        {
+            "id":"2",
+            "img":"https://images.pexels.com/photos/270789/pexels-photo-270789.jpeg?_gl=1*oedm13*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MDUzMzQkbzEzJGcxJHQxNzUyNTA1NTgzJGozNiRsMCRoMA..",
+            "time":"08:00AM - 10:00PM",
+            "city" : "Mumbai",
+            "title" : "Open House And Registration",
+            "dec" : "Join our Open House to tour the studio, meet the instructors, try mini-classes, and register."
+        },
+         {
+            "id":"3",
+            "img":"https://images.pexels.com/photos/27555519/pexels-photo-27555519.jpeg?_gl=1*1psz4sv*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MDUzMzQkbzEzJGcxJHQxNzUyNTA1NzU3JGoyMiRsMCRoMA..",
+            "time":"08:00AM - 10:00PM",
+            "city" : "Delhi",
+            "title" : "Open House Morris Dance",
+            "dec" : "Join us for a lively introduction to Morris Dance — a fun, energetic folk tradition filled. "
+        },
+          {
+            "id":"4",
+            "img":"https://images.pexels.com/photos/32627063/pexels-photo-32627063.jpeg?_gl=1*onef2b*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MDUzMzQkbzEzJGcxJHQxNzUyNTA2MDI2JGo1NSRsMCRoMA..",
+            "time":"08:00AM - 10:00PM",
+            "city" : "jaipur",
+            "title" : "Open House Dance Studio",
+            "dec" : "Meet our instructors, tour the studio, try free mini-classes, and register for the new season."
+        }
+    ],
+    "blogs":[
+        {
+            "id":"1",
+            "img":"https://images.pexels.com/photos/20134505/pexels-photo-20134505.jpeg?_gl=1*8ipezs*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MTEzNzkkbzE0JGcxJHQxNzUyNTExNDIyJGoxNyRsMCRoMA..",
+            "title":"Bharatanatyam",
+            "dec":"A traditional Indian dance form known for storytelling through expressive gestures, rhythm, and intricate footwork."
+        },
+          {
+            "id":"2",
+            "img":"https://images.pexels.com/photos/13993471/pexels-photo-13993471.jpeg?_gl=1*21msvl*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MTEzNzkkbzE0JGcxJHQxNzUyNTExNjI4JGo3JGwwJGgw",
+            "title":"Hip-Hop",
+            "dec":" A high-energy street style that includes popping, locking, and breaking. Hip-hop encourages freestyle, creativity. "
+        },
+          {
+            "id":"3",
+            "img":"https://images.pexels.com/photos/7969814/pexels-photo-7969814.jpeg?_gl=1*17qn3ld*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MTEzNzkkbzE0JGcxJHQxNzUyNTExODEyJGo0NCRsMCRoMA..",
+            "title":"K-Pop Dance",
+            "dec":"Inspired by Korean pop music videos, this modern style focuses on sharp, synchronized movements and vibrant performance."
+        },
+          {
+            "id":"4",
+            "img":"https://images.pexels.com/photos/32002983/pexels-photo-32002983.jpeg?_gl=1*1tvr0rj*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MTEzNzkkbzE0JGcxJHQxNzUyNTEyMDE1JGoyOSRsMCRoMA..",
+            "title":"Ballet",
+            "dec":"A highly technical form of dance with graceful movements, pointe work, and elegant choreography. "
+        },
+          {
+            "id":"5",
+            "img":"https://images.pexels.com/photos/16039776/pexels-photo-16039776.jpeg?_gl=1*j84myf*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MTEzNzkkbzE0JGcxJHQxNzUyNTEyMDg1JGo0MCRsMCRoMA..",
+            "title":"Kathak",
+            "dec":"A classical Indian dance that uses storytelling through gestures, facial expressions, and intricate footwork with ankle bells. "
+        },
+          {
+            "id":"6",
+            "img":"https://images.pexels.com/photos/28996384/pexels-photo-28996384.jpeg?_gl=1*1ujp9lj*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MTEzNzkkbzE0JGcxJHQxNzUyNTEyMTgyJGozMiRsMCRoMA..",
+            "title":"Breakdance",
+            "dec":"Part of hip-hop culture, breakdance includes acrobatic and athletic moves such as spins, freezes, and power moves."
+        },
+          {
+            "id":"7",
+            "img":"https://images.pexels.com/photos/29873545/pexels-photo-29873545.jpeg?_gl=1*cgptnm*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTI1MTEzNzkkbzE0JGcxJHQxNzUyNTEyMzM4JGozMSRsMCRoMA..",
+            "title":"Bollywood Dance",
+            "dec":"A colorful, dramatic, and expressive dance style mixing Indian classical, folk, and Western dance forms. "
+        }
+        
+    ],
+    "training":[
+        {
+            "id":"1",
+            "img":"https://images.pexels.com/photos/5135106/pexels-photo-5135106.jpeg?_gl=1*1qd101n*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTMxNjI3NDQkbzE2JGcxJHQxNzUzMTYyOTg2JGoyJGwwJGgw",
+            "name":"Dance Theater",
+            "dec":"A Dance Theater is a creative performance space where storytelling meets movement. It blends dance, drama, music, and visuals. "
+        },
+        {
+            "id":"2",
+            "img":"https://images.pexels.com/photos/5154004/pexels-photo-5154004.jpeg",
+            "name":"Personalized Learning",
+            "dec":"Personalized Learning is an educational approach tailored to individual students' needs, skills, interests, and learning pace."
+        },
+        {
+            "id":"3",
+            "img":"https://images.pexels.com/photos/7894541/pexels-photo-7894541.jpeg?_gl=1*1ctrv87*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTMxNjI3NDQkbzE2JGcxJHQxNzUzMTYzNTY5JGo0OCRsMCRoMA..",
+            "name":"Convenient Dancing",
+            "dec":"Convenient Dancing refers to dance learning or practice that is flexible, accessible, and fits easily into a person’s lifestyle."
+        },
+        {
+            "id":"4",
+            "img":"https://images.pexels.com/photos/864990/pexels-photo-864990.jpeg?_gl=1*1umb3pv*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTMxNjY4OTAkbzE3JGcxJHQxNzUzMTY2OTAwJGo1MCRsMCRoMA..",
+            "name":"Fitness & Wellness",
+            "dec":"The Fitness & Wellness Department focuses on improving physical health, mental well-being, and body awareness."
+        },
+        {
+            "id":"5",
+            "img":"https://images.pexels.com/photos/14783497/pexels-photo-14783497.png?_gl=1*1s1jg67*_ga*MTgyNTY4NzA1OC4xNzQxMTA1NzQ2*_ga_8JE65Q40S6*czE3NTMxNjY4OTAkbzE3JGcxJHQxNzUzMTY3MDY3JGo1OSRsMCRoMA..",
+            "name":" Production & Choreography",
+            "dec":"The Production & Choreography Department specializes in transforming creative ideas into captivating stage performances."
+        }
     ]
 
 }

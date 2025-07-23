@@ -8,12 +8,15 @@ import Classes from "./Website/Pages/Classes";
 import Dancetraining from "./Website/Pages/Dancetraining";
 import Ourteam from "./Website/Pages/Ourteam";
 import Testimonial from "./Website/Pages/Testimonial";
-import Dancegallery from "./Website/Pages/Dancegallery";
+
 import Contact from "./Website/Pages/Contact";
 import Aheader from "./Admin/Acomman/Aheader";
 
 
 import Aboutamanage from "./Admin/Apages/Aboutmanage";
+import Eventmanage from "./Admin/Apages/Eventmanage";
+import Blogsmanage from "./Admin/Apages/Blogsmanage";
+import Trainingmanage from "./Admin/Apages/Trainingmanage";
 
 
 
@@ -36,7 +39,7 @@ function App() {
           <Route path="/dance" element={<Dancetraining />} />
           <Route path="/team" element={<Ourteam />} />
           <Route path="/test" element={<Testimonial />} />
-          <Route path="/gallery" element={<Dancegallery />} />
+        
           <Route path="/contact" element={<Contact />} />
 
 
@@ -45,6 +48,9 @@ function App() {
           <Route path="/dash" element={<Aheader />}/>
           
           <Route path="/aboutmanage" element={<Aboutamanage />} />
+          <Route path="/eventmanage" element={<Eventmanage />}/>
+          <Route path="/blogmanage" element={<Blogsmanage />}/>
+          <Route path="/trainingmanage" element={<Trainingmanage />} />
         </Routes>
       </div>
     </BrowserRouter>

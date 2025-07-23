@@ -50,13 +50,13 @@ function Aheader() {
                         <div className="navbar-nav ms-auto py-0">
                             <NavLink to="/dash" className="nav-item nav-link ">Dashborad</NavLink>
                             <NavLink to="/aboutmanage" className="nav-item nav-link">About Manage</NavLink>
-                            <NavLink to="/" className="nav-item nav-link">Events</NavLink>
-                            <NavLink to="/" className="nav-item nav-link">Blogs</NavLink>
+                            <NavLink to="/eventmanage" className="nav-item nav-link">Events</NavLink>
+                            <NavLink to="/blogmanage" className="nav-item nav-link">Blogs</NavLink>
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div className="dropdown-menu m-0">
                                     <NavLink to="/" className="dropdown-item">Our classes</NavLink>
-                                    <NavLink to="/" className="dropdown-item">Dance Training</NavLink>
+                                    <NavLink to="/trainingmanage" className="dropdown-item">Dance Training</NavLink>
                                     <NavLink to="/" className="dropdown-item">Our Team</NavLink>
                                     <NavLink to="/" className="dropdown-item">Testimonial</NavLink>
                                     <NavLink to="/" className="dropdown-item">Dance Gallery</NavLink>
