@@ -1,0 +1,24 @@
+{
+    "products":[
+        {
+           "id":"1",
+            "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0ab04620-a75f-4ea5-bce7-3e26a6dec829/custom-dunk-low-unlocked-by-you.png",
+             "shoename": "Nike Dunk Low Unlocked By You",
+                "companyname": "NIKE",
+              "price": " 14,995.00 INR",  
+               "rating": "4.9", 
+                   "shoecolor": "Multi-Colour",
+                   "size":"6,7,8,9,10"
+        },
+         {
+           "id":"2",
+            "image": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/23801d86-2796-4a67-aa25-6ae3fc9a4d83/W+NIKE+DUNK+LOW+PRM.png",
+             "shoename": "Nike Dunk Low Premium",
+                "companyname": "NIKE",
+              "price": "10,795.00 INR",  
+               "rating": "4.7", 
+                   "shoecolor": "White/Photon Dust/Stadium Green/Photo Blue",
+                   "size":"6,7,8,9,10"
+        }
+    ]
+}
